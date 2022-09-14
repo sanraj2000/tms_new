@@ -30,7 +30,7 @@ jobs:
       - name: GET all AWS US 1012
         id: tms1
         run: | 
-          curl --user apigw:XCZZpHNh4eJTTs4f --location --request GET 'https://tms.apigw-aw-us.webmethods-dev.io/tms/v1/tenants' --header 'Accept: application/json' -o AWS.json
+          curl --user apigw:XCZZpHNh4eJTTs4f --location --request GET 'https://tms.apigw-aw-us.webmethods-dev.io/tms/v1/tenants' --header 'Accept: application/json' -o ./output/AWS.json
           
       - name: Upload performance test results
         uses: actions/upload-artifact@v3

@@ -132,47 +132,47 @@
                     // FETCHING DATA FROM JSON FILE
                     $.getJSON("output/AWS.json", 
                             function (data) {
-                        var student = '';
+                        var student1 = '';
   
                         // ITERATING THROUGH OBJECTS
                         $.each(data, function (key, value) {
   
                             //CONSTRUCTION OF ROWS HAVING
                             // DATA FROM JSON OBJECT
-                            student += '<tr>';
-                            student += '<td>' + 
+                            student1 += '<tr>';
+                            student1 += '<td>' + 
                                 value.tenantName + '</td>';
   
-                            student += '<td>' + 
+                            student1 += '<td>' + 
                                 value.tier + '</td>';
   
-                            student += '<td>' + 
+                            student1 += '<td>' + 
                                 value.tenantStatus + '</td>';
   
-                            student += '<td>' + 
+                            student1 += '<td>' + 
                                 value.currentVersion + '</td>';
                             
-                             student += '<td>' + 
+                             student1 += '<td>' + 
                                 value.tenantEmail + '</td>';
   
-                            student += '<td>' + 
+                            student1 += '<td>' + 
                                 value.creationDate+ '</td>';
   
-                            student += '<td>' + 
+                            student1 += '<td>' + 
                                 value.latestChangeDate + '</td>';
   
-                            student += '<td>' + 
+                            student1 += '<td>' + 
                                 value.expiryDate + '</td>';
   
-                            student += '</tr>';
+                            student1 += '</tr>';
                         });
                           
                         //INSERTING ROWS INTO TABLE 
-                        $('#table').append(student);
+                        $('#table').append(student1);
                     });
                 });
             </script>
-          
+      </table>
     </section>
 </body>
   

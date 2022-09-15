@@ -37,3 +37,13 @@ jobs:
         with:
           name: report
           path: ./output/AWS.json
+    
+             
+      - name: "Put back details"
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          GITHUB_TOKEN: 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
+          branch: main
+          commit_message: "Automated Change"
+          push_options: '--force'
+          create_branch: true

@@ -126,16 +126,16 @@
                <th>expiryDate</th> 
             </tr>
   
-            <script1>
+            <script>
                 $(document).ready(function () {
   
                     // FETCHING DATA FROM JSON FILE
                     $.getJSON("output/AWS.json", 
-                            function (data) {
+                            function (data1) {
                         var student1 = '';
   
                         // ITERATING THROUGH OBJECTS
-                        $.each(data, function (key, value) {
+                        $.each(data1, function (key, value) {
   
                             //CONSTRUCTION OF ROWS HAVING
                             // DATA FROM JSON OBJECT
@@ -171,7 +171,7 @@
                         $('#table').append(student1);
                     });
                 });
-            </script1>
+            </script>
       </table>
     </section>
 </body>

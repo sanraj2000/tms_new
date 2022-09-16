@@ -122,17 +122,15 @@
                 <th>tier</th>
                 <th>tenantStatus</th>
                 <th>currentVersion</th>
-                <th>tenantEmail</th>
                 <th>creationDate</th> 
-                <th>latestChangeDate</th> 
-               <th>expiryDate</th> 
+                <th>latestChangeDate</th>
             </tr>
   
             <script id ="dev2">
                 $(document).ready(function () {
   
                     // FETCHING DATA FROM JSON FILE
-                    $.getJSON("output/AWS.json", 
+                    $.getJSON("output/stage.json", 
                             function (data) {
                         var student = '';
   
@@ -154,8 +152,7 @@
                             student += '<td>' + 
                                 value.currentVersion + '</td>';
                             
-                             student += '<td>' + 
-                                value.tenantEmail + '</td>';
+                         
   
                             student += '<td>' + 
                                 value.creationDate+ '</td>';
@@ -163,8 +160,7 @@
                             student += '<td>' + 
                                 value.latestChangeDate + '</td>';
   
-                            student += '<td>' + 
-                                value.expiryDate + '</td>';
+                           
   
                             student += '</tr>';
                         });

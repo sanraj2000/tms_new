@@ -8,11 +8,41 @@
     <script src=
 "https://code.jquery.com/jquery-3.5.1.js">
     </script>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
-   
+    <!-- CSS FOR STYLING THE PAGE -->
+    <style>
+        table {
+            margin: 0 auto;
+            font-size: large;
+            border: 1px solid black;
+        }
+  
+        h1 {
+            text-align: center;
+            color: #006600;
+            font-size: xx-large;
+            font-family: 'Gill Sans', 
+                'Gill Sans MT', ' Calibri', 
+                'Trebuchet MS', 'sans-serif';
+        }
+  
+        td {
+            background-color: #E4F5D4;
+            border: 1px solid black;
+        }
+  
+        th,
+        td {
+            font-weight: bold;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+  
+        td {
+            font-weight: lighter;
+        }
+    </style>
 </head>
   
 <body>
@@ -20,20 +50,20 @@
      
   
         <!-- TABLE CONSTRUCTION-->
-        <table class="table table-borderless table-dark" id='table'>
+        <table id='table'>
             <!-- HEADING FORMATION -->
-          <tr><thead colspan="8">DEV TENANTS</thead></tr>
+          <tr><th colspan="8">DEV TENANTS</th></tr>
             <tr>
-                <th scope="col">Tenant Name</th>
-                <th scope="col">Tier</th>
-                <th scope="col">Tenant Status</th>
-                <th scope="col">Current Version</th>
-                <th scope="col">Tenant Email</th>
-                <th scope="col">creation Date</th> 
-                <th scope="col">Latest Change Date</th> 
-               <th scope="col">Expiry Date</th> 
+                <th>Tenant Name</th>
+                <th>Tier</th>
+                <th>Tenant Status</th>
+                <th>Current Version</th>
+                <th>Tenant Email</th>
+                <th>creation Date</th> 
+                <th>Latest Change Date</th> 
+               <th>Expiry Date</th> 
             </tr>
-            <tbody>
+  
             <script id ="san">
                 $(document).ready(function () {
   
@@ -80,7 +110,6 @@
                     });
                 });
             </script>
-          </tbody>
         <br><br>
           
          

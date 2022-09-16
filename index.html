@@ -8,6 +8,9 @@
     <script src=
 "https://code.jquery.com/jquery-3.5.1.js">
     </script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
     <!-- CSS FOR STYLING THE PAGE -->
     <style>
@@ -50,18 +53,18 @@
      
   
         <!-- TABLE CONSTRUCTION-->
-        <table id='table'>
+        <table class="table table-borderless table-dark" id='table'>
             <!-- HEADING FORMATION -->
-          <tr><th colspan="8">DEV TENANTS</th></tr>
+          <tr><thead colspan="8">DEV TENANTS</thead></tr>
             <tr>
-                <th>Tenant Name</th>
-                <th>Tier</th>
-                <th>Tenant Status</th>
-                <th>Current Version</th>
-                <th>Tenant Email</th>
-                <th>creation Date</th> 
-                <th>Latest Change Date</th> 
-               <th>Expiry Date</th> 
+                <th scope="col">Tenant Name</th>
+                <th scope="col">Tier</th>
+                <th scope="col">Tenant Status</th>
+                <th scope="col">Current Version</th>
+                <th scope="col">Tenant Email</th>
+                <th scope="col">creation Date</th> 
+                <th scope="col">Latest Change Date</th> 
+               <th scope="col">Expiry Date</th> 
             </tr>
   
             <script id ="san">

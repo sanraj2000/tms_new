@@ -63,7 +63,7 @@
                <th>expiryDate</th> 
             </tr>
   
-            <script>
+            <script id ="san">
                 $(document).ready(function () {
   
                     // FETCHING DATA FROM JSON FILE
@@ -109,6 +109,72 @@
                     });
                 });
             </script>
+          
+          
+           <h1>DEV tenants</h1>
+  
+        <!-- TABLE CONSTRUCTION-->
+        <table id='table1'>
+            <!-- HEADING FORMATION -->
+            <tr>
+                <th>tenantName</th>
+                <th>tier</th>
+                <th>tenantStatus</th>
+                <th>currentVersion</th>
+                <th>tenantEmail</th>
+                <th>creationDate</th> 
+                <th>latestChangeDate</th> 
+               <th>expiryDate</th> 
+            </tr>
+  
+            <script id ="dev2">
+                $(document).ready(function () {
+  
+                    // FETCHING DATA FROM JSON FILE
+                    $.getJSON("output/AWS.json", 
+                            function (data) {
+                        var student = '';
+  
+                        // ITERATING THROUGH OBJECTS
+                        $.each(data, function (key, value) {
+  
+                            //CONSTRUCTION OF ROWS HAVING
+                            // DATA FROM JSON OBJECT
+                            student += '<tr>';
+                            student += '<td>' + 
+                                value.tenantName + '</td>';
+  
+                            student += '<td>' + 
+                                value.tier + '</td>';
+  
+                            student += '<td>' + 
+                                value.tenantStatus + '</td>';
+  
+                            student += '<td>' + 
+                                value.currentVersion + '</td>';
+                            
+                             student += '<td>' + 
+                                value.tenantEmail + '</td>';
+  
+                            student += '<td>' + 
+                                value.creationDate+ '</td>';
+  
+                            student += '<td>' + 
+                                value.latestChangeDate + '</td>';
+  
+                            student += '<td>' + 
+                                value.expiryDate + '</td>';
+  
+                            student += '</tr>';
+                        });
+                          
+                        //INSERTING ROWS INTO TABLE 
+                        $('#table').append(student);
+                    });
+                });
+            </script>
+          
+          
           </section>
 </body>
   

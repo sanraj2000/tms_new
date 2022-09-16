@@ -1,0 +1,179 @@
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <title>Tenant Details</title>
+  
+    <!-- INCLUDING JQUERY-->
+    <script src=
+"https://code.jquery.com/jquery-3.5.1.js">
+    </script>
+  
+    <!-- CSS FOR STYLING THE PAGE -->
+    <style>
+        table {
+            margin: 0 auto;
+            font-size: large;
+            border: 1px solid black;
+        }
+  
+        h1 {
+            text-align: center;
+            color: #006600;
+            font-size: xx-large;
+            font-family: 'Gill Sans', 
+                'Gill Sans MT', ' Calibri', 
+                'Trebuchet MS', 'sans-serif';
+        }
+  
+        td {
+            background-color: #E4F5D4;
+            border: 1px solid black;
+        }
+  
+        th,
+        td {
+            font-weight: bold;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+  
+        td {
+            font-weight: lighter;
+        }
+    </style>
+</head>
+  
+<body>
+    <section>
+     
+  
+        <!-- TABLE CONSTRUCTION-->
+        <table id='table'>
+            <!-- HEADING FORMATION -->
+          <tr><th colspan="8">DEV TENANTS</th></tr>
+            <tr>
+                <th>Tenant Name</th>
+                <th>Tier</th>
+                <th>Tenant Status</th>
+                <th>Current Version</th>
+                <th>Tenant Email</th>
+                <th>creation Date</th> 
+                <th>Latest Change Date</th> 
+               <th>Expiry Date</th> 
+            </tr>
+  
+            <script id ="san">
+                $(document).ready(function () {
+  
+                    // FETCHING DATA FROM JSON FILE
+                    $.getJSON("output/AWS.json", 
+                            function (data) {
+                        var student = '';
+  
+                        // ITERATING THROUGH OBJECTS
+                        $.each(data, function (key, value) {
+  
+                            //CONSTRUCTION OF ROWS HAVING
+                            // DATA FROM JSON OBJECT
+                            student += '<tr>';
+                            student += '<td>' + 
+                                value.tenantName + '</td>';
+  
+                            student += '<td>' + 
+                                value.tier + '</td>';
+  
+                            student += '<td>' + 
+                                value.tenantStatus + '</td>';
+  
+                            student += '<td>' + 
+                                value.currentVersion + '</td>';
+                            
+                             student += '<td>' + 
+                                value.tenantEmail + '</td>';
+  
+                            student += '<td>' + 
+                                value.creationDate+ '</td>';
+  
+                            student += '<td>' + 
+                                value.latestChangeDate + '</td>';
+  
+                            student += '<td>' + 
+                                value.expiryDate + '</td>';
+  
+                            student += '</tr>';
+                        });
+                          
+                        //INSERTING ROWS INTO TABLE 
+                        $('#table').append(student);
+                    });
+                });
+            </script>
+        <br><br>
+          
+         
+  
+        <!-- TABLE CONSTRUCTION-->
+        <table id='table1'>
+            <!-- HEADING FORMATION -->
+           <tr><th colspan="6">STAGE TENANTS</th></tr>
+            <tr>
+                <th>Tenant Name</th>
+                <th>Tier</th>
+                <th>Tenant Status</th>
+                <th>Current Version</th>
+                <th>Creation Date</th> 
+                <th>Latest Change Date</th>
+            </tr>
+  
+            <script id ="dev2">
+                $(document).ready(function () {
+  
+                    // FETCHING DATA FROM JSON FILE
+                    $.getJSON("output/stage.json", 
+                            function (data) {
+                        var student = '';
+  
+                        // ITERATING THROUGH OBJECTS
+                        $.each(data, function (key, value) {
+  
+                            //CONSTRUCTION OF ROWS HAVING
+                            // DATA FROM JSON OBJECT
+                            student += '<tr>';
+                            student += '<td>' + 
+                                value.tenantName + '</td>';
+  
+                            student += '<td>' + 
+                                value.tier + '</td>';
+  
+                            student += '<td>' + 
+                                value.tenantStatus + '</td>';
+  
+                            student += '<td>' + 
+                                value.currentVersion + '</td>';
+                            
+                         
+  
+                            student += '<td>' + 
+                                value.creationDate+ '</td>';
+  
+                            student += '<td>' + 
+                                value.latestChangeDate + '</td>';
+  
+                           
+  
+                            student += '</tr>';
+                        });
+                          
+                        //INSERTING ROWS INTO TABLE 
+                        $('#table1').append(student);
+                    });
+                });
+            </script>
+          
+          
+          </section>
+</body>
+  
+</html>

@@ -22,20 +22,6 @@ console.log("started");
           $scope.totalCount_cc2=$scope.allrows_cconns2.length;
            }, function(){alert("failed in loading file for AWS_US");});
     
-        // AWS US 1011
-        var aws_us_1011 = {
-          method: 'GET',
-        url: "./output/det.json",
-          headers: {"Content-Type": "application/json"}
-        }
-        $http(aws_us_1011).then(function(response){
-        $scope.temp = response.data;
-       // console.log ("old1 " +$scope.allrows_cconns2);
-       // console.log ("new 1 "+$scope.temp);
-        $scope.allrows_cconns2 = $scope.allrows_cconns2.concat($scope.temp);
-       // console.log ("final "+$scope.allrows_cconns2);
-        $scope.totalCount_cc2=$scope.allrows_cconns2.length;
-        }, function(){alert("failed in loading file for AWS_US_1011");});
 
         
 
@@ -55,19 +41,7 @@ console.log("started");
 
 
 
-           // AWS EU 1011
-           var aws_eu_1011 = {
-            method: 'GET',
-          url: "./output/det.json",
-            headers: {"Content-Type": "application/json"}
-          }
-          $http(aws_eu_1011).then(function(response){
-          $scope.temp = response.data;
-   
-          $scope.allrows_cconns = $scope.allrows_cconns.concat($scope.temp);
-      
-          $scope.totalCount_cc=$scope.allrows_cconns.length;
-          }, function(){alert("failed in loading file for AWS_EU_1011");});
+          
 
 // end of AWS EU
 
@@ -84,185 +58,13 @@ console.log("started");
                 $scope.totalCount_cc3=$scope.allrows_cconns3.length;
                 }, function(){alert("failed in loading file for AWS_AU");});
 
-      // AWS AU 1011
-              var aws_au_1011 = {
-                method: 'GET',
-              url: "./output/det.json",
-                headers: {"Content-Type": "application/json"}
-              }
-              $http(aws_au_1011).then(function(response){
-              $scope.temp = response.data;
-       
-              $scope.allrows_cconns3 = $scope.allrows_cconns3.concat($scope.temp);
-          
-              $scope.totalCount_cc3=$scope.allrows_cconns3.length;
-              }, function(){alert("failed in loading file for AWS_AU_1011");});
 
 
-     // ----------##########################------ Start of Azure US -----------------################################---------------
 
-               // Azure US 1012
-               var azure_us_1012 = {
-                method: 'GET',
-               url: "./output/det.json",
-                headers: {"Content-Type": "application/json"}
-             }
-            $http(azure_us_1012).then(function(response2){
-              $scope.allrows_cconns2_azure =response2.data;
-          
-            $scope.totalCount_azure_cc2=$scope.allrows_cconns2_azure.length;
-             }, function(){alert("failed in loading file for Azure_US");});
-      
-          // Azure US 1011
-          var azure_us_1011 = {
-            method: 'GET',
-          url: "./output/det.json",
-            headers: {"Content-Type": "application/json"}
-          }
-          $http(azure_us_1011).then(function(response){
-          $scope.temp = response.data;
+
+
+
  
-          $scope.allrows_cconns2_azure = $scope.allrows_cconns2_azure.concat($scope.temp);
- 
-          $scope.totalCount_azure_cc2=$scope.allrows_cconns2_azure.length;
-          }, function(){alert("failed in loading file for Azure_US_1011");});
-  
-          
-  
-    // ---------------------------------------- end of azureUS --------------------------------
-  
-       // Azure EU
-              var azure_eu_1012 = {
-                method: 'GET',
-              url: "./output/det.json",
-                headers: {"Content-Type": "application/json"}
-            }
-            $http(azure_eu_1012).then(function(response){
-              $scope.allrows_cconns_azure =response.data;
-  
-            $scope.totalCount_azure_cc=$scope.allrows_cconns_azure.length;
-            }, function(){alert("failed in loading file for Azure_EU");});
-  
-  
-  
-             // Azure EU 1011
-             var azure_eu_1011 = {
-              method: 'GET',
-            url: "./output/det.json",
-              headers: {"Content-Type": "application/json"}
-            }
-            $http(azure_eu_1011).then(function(response){
-            $scope.temp = response.data;
-     
-            $scope.allrows_cconns_azure = $scope.allrows_cconns_azure.concat($scope.temp);
-        
-            $scope.totalCount_azure_cc=$scope.allrows_cconns_azure.length;
-            }, function(){alert("failed in loading file for Azure_EU_1011");});
-  
-  // end of Azure EU
-  
-  
-              // Azure AU
-              
-       var azure_au_1012 = {
-        method: 'GET',
-       url: "./output/det.json",
-        headers: {"Content-Type": "application/json"}
-     }
-    $http(azure_au_1012).then(function(response){
-      $scope.allrows_cconns3_azure =response.data;
-  
-    $scope.totalCount_azure_cc3=$scope.allrows_cconns3_azure.length;
-     }, function(){alert("failed in loading file for Azure_AU");});
-
-     var azure_au_1011 = {
-      method: 'GET',
-    url: "./output/det.json",
-      headers: {"Content-Type": "application/json"}
-    }
-    $http(azure_au_1011).then(function(response){
-    $scope.temp = response.data;
-
-    $scope.allrows_cconns3_azure = $scope.allrows_cconns3_azure.concat($scope.temp);
-
-    $scope.totalCount_azure_cc3=$scope.allrows_cconns3_azure.length;
-    }, function(){alert("failed in loading file for Azure_AU_1011");});
-
-       // ---------###################################------ end of Azure US ---------#################################-----------------------
-
-
-
-
-   // ---------------------------------- Start Schedules ----------------------------------
-                        //----------------- AWS US ------------------
-                        var aws_schedule_1 = {
-                          method: 'GET',
-                        url: "./output/schedules/AWS_US.json",
-                          headers: {"Content-Type": "application/json"}
-                      }
-                      $http(aws_schedule_1).then(function(response){
-                        $scope.allrows_schedules1 =response.data;
-
-                      $scope.totalschedules1_c=$scope.allrows_schedules1.length;
-                      }, function(){alert("failed in loading schedule file for AWS US");});
-
-                      var aws_schedule_2 = {
-                        method: 'GET',
-                      url: "./output/schedules/AWS_EU.json",
-                        headers: {"Content-Type": "application/json"}
-                      }
-                      $http(aws_schedule_2).then(function(response){
-                      $scope.allrows_schedules2 =response.data;
-
-                      $scope.totalschedules2_c=$scope.allrows_schedules2.length;
-                      }, function(){alert("failed in loading schedule file for AWS EU");});
-
-                      var aws_schedule_3 = {
-                        method: 'GET',
-                      url: "./output/schedules/AWS_AU.json",
-                        headers: {"Content-Type": "application/json"}
-                      }
-                      $http(aws_schedule_3).then(function(response){
-                      $scope.allrows_schedules3 =response.data;
-
-                      $scope.totalschedules3_c=$scope.allrows_schedules3.length;
-                      }, function(){alert("failed in loading schedule file for AWS AU");});
-
-
-              //----------------- Azure US ------------------
-              var az_schedule_1 = {
-                method: 'GET',
-              url: "./output/schedules/Azure_US.json",
-                headers: {"Content-Type": "application/json"}
-            }
-            $http(az_schedule_1).then(function(response){
-              $scope.allrows_az_schedules1 =response.data;
-
-            $scope.totalschedules1_c_az=$scope.allrows_az_schedules1.length;
-            }, function(){alert("failed in loading schedule file for Azure US");});
-
-            var az_schedule_2 = {
-              method: 'GET',
-            url: "./output/schedules/Azure_EU.json",
-              headers: {"Content-Type": "application/json"}
-            }
-            $http(az_schedule_2).then(function(response){
-            $scope.allrows_az_schedules2 =response.data;
-
-            $scope.totalschedules2_c_az=$scope.allrows_az_schedules2.length;
-            }, function(){alert("failed in loading schedule file for Azure EU");});
-
-            var az_schedule_3 = {
-              method: 'GET',
-            url: "./output/schedules/Azure_AU.json",
-              headers: {"Content-Type": "application/json"}
-            }
-            $http(az_schedule_3).then(function(response){
-            $scope.allrows_az_schedules3 =response.data;
-
-            $scope.totalschedules3_c_az=$scope.allrows_az_schedules3.length;
-            }, function(){alert("failed in loading schedule file for Azure AU");});
- // ---------------------------------- END Schedules ----------------------------------
        //substring
   $scope.getData1 = $scope.allrows_cconns2;
   

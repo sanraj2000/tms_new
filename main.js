@@ -234,6 +234,32 @@ console.log("started");
                 return input.slice(start);
             }
         });
+ //tabs
+          function connectorTabs(tabName) {
+            var i;
+            var x = document.getElementsByClassName("wmiotabtype");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
 
+            if(tabName === "Schedules"){
+              document.getElementById('defaultOpen2').click();
+            }
+          }
+          //// Get the element with id="defaultOpen" and click on it
+          //  document.getElementById("defaultOpen").Click();
+
+          
+          //tabs schedules
+          function connectorTabs2(tabName) {
+            var i;
+            var x = document.getElementsByClassName("wmiotabtype2");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+           
+          }
 
   

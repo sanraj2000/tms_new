@@ -13,7 +13,7 @@ console.log("started");
             // AWS US 1012
             var reposinfo2 = {
               method: 'GET',
-             url: "./output/det.json",
+             url: "./output/AWS.json",
               headers: {"Content-Type": "application/json"}
            }
           $http(reposinfo2).then(function(response2){
@@ -30,7 +30,7 @@ console.log("started");
      // AWS EU
             var reposinfo1 = {
               method: 'GET',
-            url: "./output/det.json",
+            url: "./output/AWS.json",
               headers: {"Content-Type": "application/json"}
           }
           $http(reposinfo1).then(function(response){
@@ -49,7 +49,7 @@ console.log("started");
     // AWS AU
                   var aws_au_1012 = {
                     method: 'GET',
-                  url: "./output/det.json",
+                  url: "./output/AWS.json",
                     headers: {"Content-Type": "application/json"}
                 }
                 $http(aws_au_1012).then(function(response){

@@ -24,7 +24,8 @@ console.log("started");
 
         
 
-  // ---------------------------------------- end of AWS US --------------------------------
+ 
+		
 
      // STAGE
             var reposinfo1 = {
@@ -42,8 +43,7 @@ console.log("started");
 
           
 
-// end of AWS EU
-
+		
 
     // INT
                   var aws_au_1012 = {

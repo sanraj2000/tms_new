@@ -40,8 +40,8 @@
     <div class="tab" style="margin-left: 94px; margin-right: 94px; margin-top: 20px;">
        
         <button class="tablinks" onclick="connectorTabs('DEVTENANTS')"  id="defaultOpen" style="background: darkseagreen;">DEV</button>
-        <button class="tablinks" onclick="connectorTabs('AWSPRODEU') " style="background: darkseagreen;">STAGE</button>        
-        <button class="tablinks" onclick="connectorTabs('AWSPRODAU')" style="background: darkseagreen;">INT</button>
+        <button class="tablinks" onclick="connectorTabs('STAGETENANTS') " style="background: darkseagreen;">STAGE</button>        
+        <button class="tablinks" onclick="connectorTabs('INTTENANTS')" style="background: darkseagreen;">INT</button>
        
 
       </div>
@@ -170,7 +170,7 @@
 </div>
 <!-- STAGE TENANTS           -->
       
-      <div id="AWSPRODEU" class="container-fluid wmiotabtype tabcontent">
+      <div id="STAGETENANTS" class="container-fluid wmiotabtype tabcontent">
         <div class="container-fluid row">
             <p class="lead"> STAGE  : {{ totalCount_cc }}</p>
         </div>
@@ -220,7 +220,7 @@
 
 
     <!-- INT TENANTS           -->
-    <div id="AWSPRODAU" class="container-fluid wmiotabtype tabcontent">
+    <div id="INTTENANTS" class="container-fluid wmiotabtype tabcontent">
         
         <div class="container-fluid row">
             <p class="lead"> INT  : {{ totalCount_cc3 }}</p>

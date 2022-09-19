@@ -13,7 +13,7 @@ console.log("started");
             // AWS US 1012
             var reposinfo2 = {
               method: 'GET',
-             url: "./output/AWS_US.json",
+             url: "./output/AWS.json",
               headers: {"Content-Type": "application/json"}
            }
           $http(reposinfo2).then(function(response2){
@@ -25,7 +25,7 @@ console.log("started");
         // AWS US 1011
         var aws_us_1011 = {
           method: 'GET',
-        url: "./output/AWS_US_1011.json",
+        url: "./output/AWS.json",
           headers: {"Content-Type": "application/json"}
         }
         $http(aws_us_1011).then(function(response){
@@ -44,7 +44,7 @@ console.log("started");
      // AWS EU
             var reposinfo1 = {
               method: 'GET',
-            url: "./output/AWS_EU.json",
+            url: "./output/AWS.json",
               headers: {"Content-Type": "application/json"}
           }
           $http(reposinfo1).then(function(response){
@@ -58,7 +58,7 @@ console.log("started");
            // AWS EU 1011
            var aws_eu_1011 = {
             method: 'GET',
-          url: "./output/AWS_EU_1011.json",
+          url: "./output/AWS.json",
             headers: {"Content-Type": "application/json"}
           }
           $http(aws_eu_1011).then(function(response){
@@ -75,7 +75,7 @@ console.log("started");
     // AWS AU
                   var aws_au_1012 = {
                     method: 'GET',
-                  url: "./output/AWS_AU.json",
+                  url: "./output/AWS.json",
                     headers: {"Content-Type": "application/json"}
                 }
                 $http(aws_au_1012).then(function(response){
@@ -87,7 +87,7 @@ console.log("started");
       // AWS AU 1011
               var aws_au_1011 = {
                 method: 'GET',
-              url: "./output/AWS_AU_1011.json",
+              url: "./output/AWS.json",
                 headers: {"Content-Type": "application/json"}
               }
               $http(aws_au_1011).then(function(response){
@@ -104,7 +104,7 @@ console.log("started");
                // Azure US 1012
                var azure_us_1012 = {
                 method: 'GET',
-               url: "./output/Azure_US.json",
+               url: "./output/stage.json",
                 headers: {"Content-Type": "application/json"}
              }
             $http(azure_us_1012).then(function(response2){
@@ -116,7 +116,7 @@ console.log("started");
           // Azure US 1011
           var azure_us_1011 = {
             method: 'GET',
-          url: "./output/Azure_US_1011.json",
+          url: "./output/stage.json",
             headers: {"Content-Type": "application/json"}
           }
           $http(azure_us_1011).then(function(response){
@@ -134,7 +134,7 @@ console.log("started");
        // Azure EU
               var azure_eu_1012 = {
                 method: 'GET',
-              url: "./output/Azure_EU.json",
+              url: "./output/stage.json",
                 headers: {"Content-Type": "application/json"}
             }
             $http(azure_eu_1012).then(function(response){
@@ -148,7 +148,7 @@ console.log("started");
              // Azure EU 1011
              var azure_eu_1011 = {
               method: 'GET',
-            url: "./output/Azure_EU_1011.json",
+            url: "./output/stage.json",
               headers: {"Content-Type": "application/json"}
             }
             $http(azure_eu_1011).then(function(response){
@@ -166,7 +166,7 @@ console.log("started");
               
        var azure_au_1012 = {
         method: 'GET',
-       url: "./output/Azure_AU.json",
+       url: "./output/stage.json",
         headers: {"Content-Type": "application/json"}
      }
     $http(azure_au_1012).then(function(response){
@@ -177,7 +177,7 @@ console.log("started");
 
      var azure_au_1011 = {
       method: 'GET',
-    url: "./output/Azure_AU_1011.json",
+    url: "./output/stage.json",
       headers: {"Content-Type": "application/json"}
     }
     $http(azure_au_1011).then(function(response){
@@ -195,7 +195,7 @@ console.log("started");
 
    // ---------------------------------- Start Schedules ----------------------------------
                         //----------------- AWS US ------------------
-                        var aws_schedule_1 = {
+                   /*     var aws_schedule_1 = {
                           method: 'GET',
                         url: "./output/schedules/AWS_US.json",
                           headers: {"Content-Type": "application/json"}
@@ -275,7 +275,7 @@ console.log("started");
   //function (updatedDate) {
     //      return updatedDate.substr(0, 10);;
 
-    //  }
+    //  }*/
 
       //pagination starts
       $scope.currentPage1 = 0; 

@@ -23,7 +23,7 @@ console.log("started");
            }, function(){alert("failed in loading file for AWS_US");});
     
         // AWS US 1011
-        var aws_us_1011 = {
+     /*   var aws_us_1011 = {
           method: 'GET',
         url: "./output/AWS.json",
           headers: {"Content-Type": "application/json"}
@@ -36,7 +36,7 @@ console.log("started");
        // console.log ("final "+$scope.allrows_cconns2);
         $scope.totalCount_cc2=$scope.allrows_cconns2.length;
         }, function(){alert("failed in loading file for AWS_US_1011");});
-
+*/
         
 
   // ---------------------------------------- end of AWS US --------------------------------

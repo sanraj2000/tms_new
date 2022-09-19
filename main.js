@@ -119,5 +119,153 @@ console.log("started");
   $scope.myFunc = function() {
     $scope.count++;
   };
+		
+$scope.callWorkflow = function( rname) {
+    var reposinfo = {
+      method: 'GET',
+       url: "https://sandeepl.int-aws-us.webmethods.io/runflow/run/sync/1EMxYNkCWg?region="+rname,
+       crossDomain : true,
+
+      headers: {
+          "Content-Type": "application/json",
+      //    "Access-Control-Allow-Origin": "https://pages.github.softwareag.com",
+      //    'Access-Control-Request-Methods':'GET,HEAD,OPTIONS',
+    //    'Access-Control-Allow-Credentials':'true',
+          "Access-Control-Allow-Headers": "webhook_key",
+     //     "Origin":"https://pages.github.softwareag.com",
+    //      "Accept":"application/json, text/plain, */*",
+          "webhook_key":"398f9f1288740231667320931658378988341"
+    }
+     }
+    $http(reposinfo).then(function(response){
+
+     // console.log(response);
+
+      if (rname == 'AWS_US') {
+        $scope.alllogs =response.data;
+        $scope.totalCount=$scope.allrows.length;
+      } else if (rname == 'AWS_EU'){
+        $scope.alllogs1 =response.data;
+      }else if (rname == 'AWS_AU'){
+        $scope.alllogs2 =response.data;
+      }else if (rname == 'Azure_US'){
+        $scope.alllogs3 =response.data;
+      }else if (rname == 'Azure_EU'){
+        $scope.alllogs4 =response.data;
+      }else if (rname == 'Azure_AU'){
+        $scope.alllogs4 =response.data;
+      }
+      else if (rname == 'All'){
+    //    $scope.alllogs0_All = response.data;
+        $scope.alllogs = $scope.allrows_All.filter(d => d.environment["@displayValue"] === "AWS_US");
+   //     $scope.alllogs1 = $scope.allrows_All.filter(d => d.environment["@displayValue"] === "AWS_EU");
+     //   $scope.alllogs2 = $scope.allrows_All.filter(d => d.environment["@displayValue"] === "AWS_AU");
+   //     $scope.alllogs3 = $scope.allrows_All.filter(d => d.environment["@displayValue"] === "Azure_US");
+    //    $scope.alllogs4 = $scope.allrows_All.filter(d => d.environment["@displayValue"] === "Azure_EU");
+     //   $scope.alllogs4 = $scope.allrows_All.filter(d => d.environment["@displayValue"] === "Azure_AU");
+      }
+
+
+          //sort 'orderfilter' orderBy in controller
+        //  $scope.propertyName ="last_execution_status['*body']"
+         // $scope.reverse=true;
+         // $scope.allrows = orderBy($scope.allrows, $scope.propertyName, $scope.reverse);
+
+         // console.log($scope.allrows);
+         // console.log($scope.totalCount);
+
+     }, function(){
+      console.log("failed in call1");}
+      );
+
+     
+  };
+
+ 
+
+  $scope.callAll = function(demoName) {
+   // console.log("--------------"+demoName);
+    $scope.currentDateString();
+   
+   /* $scope.callWorkflow ("OnPrem");
+    $scope.callWorkflow ("WMIO Dev");
+    $scope.callWorkflow ("WMIO Stag");
+    $scope.callWorkflow ("WMIO Preprod");
+    $scope.callWorkflow ("WMIO INT");*/
+
+   $scope.callWorkflow ("AWS_US");
+
+  };
+
+   //&reporting_date=03/08/2021
+
+   $scope.currentDateString = function() {
+    //date
+    let current_datetime = new Date()
+    $scope.formatted_date =  (current_datetime.getMonth() + 1) + "/" + current_datetime.getDate() + "/" +current_datetime.getFullYear()
+ //  console.log("--------------"+formatted_date)
+  };
+
+  // default first call
+   $scope.callAll ("My First Call");
+
+
+          $scope.formatVersion = function (actualVersion){
+
+            var fVersion= actualVersion.substring(1, 5) + "." + actualVersion.substring(5,8)+ "." + actualVersion.substring(8,actualVersion.length);
+            return fVersion
+        }//function closed  
+
+        $scope.formatDate = function (actualDate){
+
+          var fDate= actualDate.substring(0, 10) + " " + actualDate.substring(11,19) ;
+          return fDate
+      }//function closed  
+
+  
+	});
+
+
+          //pagination : Part 2
+          //We already have a limitTo filter built-in to angular,
+          //let's make a startFrom filter
+          app.filter('startFrom', function() {
+            return function(input, start) {
+                if (!input || !input.length) { return; }
+                start = +start; //parse to int
+                return input.slice(start);
+            }
+        });
+
+
+    //tabs
+          function connectorTabs(tabName) {
+            var i;
+            var x = document.getElementsByClassName("wmiotabtype");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+
+            if(tabName === "Schedules"){
+              document.getElementById('defaultOpen2').click();
+            }
+          }
+          //// Get the element with id="defaultOpen" and click on it
+          //  document.getElementById("defaultOpen").Click();
+
+          
+          //tabs schedules
+          function connectorTabs2(tabName) {
+            var i;
+            var x = document.getElementsByClassName("wmiotabtype2");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+           
+          }
+
+
 
  

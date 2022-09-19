@@ -134,7 +134,7 @@ console.log("started");
 
    //$scope.callWorkflow ("AWS_US");
 
-  };*/
+  //};*/
 
    //&reporting_date=03/08/2021
 

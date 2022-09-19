@@ -39,9 +39,9 @@
     
     <div class="tab" style="margin-left: 94px; margin-right: 94px; margin-top: 20px;">
        
-        <button class="tablinks" onclick="connectorTabs('AWSPRODUS')"  id="defaultOpen" style="background: darkseagreen;">AWS US</button>
-        <button class="tablinks" onclick="connectorTabs('AWSPRODEU') " style="background: darkseagreen;">AWS EU</button>        
-        <button class="tablinks" onclick="connectorTabs('AWSPRODAU')" style="background: darkseagreen;">AWS AU</button>
+        <button class="tablinks" onclick="connectorTabs('AWSPRODUS')"  id="defaultOpen" style="background: darkseagreen;">DEV</button>
+        <button class="tablinks" onclick="connectorTabs('AWSPRODEU') " style="background: darkseagreen;">STAGE</button>        
+        <button class="tablinks" onclick="connectorTabs('AWSPRODAU')" style="background: darkseagreen;">INT</button>
         <button class="tablinks" onclick="connectorTabs('AzurePRODUS')" style="background: darkturquoise;">Azure US</button>        
         <button class="tablinks" onclick="connectorTabs('AzurePRODEU')" style="background: darkturquoise;">Azure EU</button>
         <button class="tablinks" onclick="connectorTabs('AzurePRODAU')" style="background: darkturquoise;" >Azure AU</button>
@@ -56,7 +56,7 @@
 <div id="AWSPRODUS" class="container-fluid wmiotabtype tabcontent">
     <div class="container-fluid row">        
 
-            <p class="lead"> AWS US  : {{ totalCount_cc2 }}</p>
+            <p class="lead"> DEV  : {{ totalCount_cc2 }}</p>
 
     </div>
  
@@ -175,7 +175,7 @@
       
       <div id="AWSPRODEU" class="container-fluid wmiotabtype tabcontent">
         <div class="container-fluid row">
-            <p class="lead"> AWS EU  : {{ totalCount_cc }}</p>
+            <p class="lead"> STAGE  : {{ totalCount_cc }}</p>
         </div>
 
         <div class="row">
@@ -226,7 +226,7 @@
     <div id="AWSPRODAU" class="container-fluid wmiotabtype tabcontent">
         
         <div class="container-fluid row">
-            <p class="lead"> AWS AU  : {{ totalCount_cc3 }}</p>
+            <p class="lead"> INT  : {{ totalCount_cc3 }}</p>
         </div>
         <div class="row">
             <div class="col-md-4">

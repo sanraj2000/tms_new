@@ -57,11 +57,12 @@ jobs:
         if: always()
         id: tms3
         run: |
-          curl --user apigw:b24tVucfEus4zQyQ --location --request GET 'https://tms.apigw-aw-us.webmethods-stage.io/tms/v1/tenants' --header 'Accept: application/json' -o ./output/stage.json
+          curl --user apigw:b24tVucfEus4zQyQ --location --request GET 'https://tms.apigw-aw-us.webmethods-stage.io/tms/v1/tenants' --header 'Accept: application/json' -o ./output/int.json
   
     
              
       - name: "Put back details"
+        if: always()
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           GITHUB_TOKEN: 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

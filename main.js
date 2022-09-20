@@ -211,10 +211,10 @@ console.log("started");
           $scope.formatVersion = function (actualVersion){
 		  
 	   if(actualVersion.length == 10){
-		   var fVersion= actualVersion.substring(1, 5) + "." + actualVersion.substring(5,6)+ "." + actualVersion.substring(6,8)+ ".0" +actualVersion.substring(8,actualVersion.length);
+		   var fVersion= actualVersion.substring(1, 5) + "." + actualVersion.substring(5,6)+ "." + actualVersion.substring(6,7)+ "." +actualVersion.substring(7,actualVersion.length);
             return fVersion
 	   }
-	   if(actualVersion.length == 11){	
+	    else if(actualVersion.length == 11){	
             var fVersion= actualVersion.substring(1, 5) + "." + actualVersion.substring(5,6)+ "." + actualVersion.substring(6,8)+ "." +actualVersion.substring(8,actualVersion.length);
             return fVersion
 	   }

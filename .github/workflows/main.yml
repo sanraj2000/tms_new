@@ -48,11 +48,13 @@ jobs:
           curl --user apigw:XCZZpHNh4eJTTs4f --location --request GET 'https://tms.apigw-aw-us.webmethods-dev.io/tms/v1/tenants' --header 'Accept: application/json' -o ./output/AWS.json
      
       - name: GET all Tenants in Stage
+        if: always()
         id: tms2
         run: |
           curl --user apigw:W5y2WjxMwrkzDkv4 --location --request GET 'https://tms.apigw-aw-us.webmethods-stage.io/tms/v1/tenants' --header 'Accept: application/json' -o ./output/stage.json
      
-      - name: GET all Tenants in Stage
+      - name: GET all Tenants in int
+        if: always()
         id: tms3
         run: |
           curl --user apigw:b24tVucfEus4zQyQ --location --request GET 'https://tms.apigw-aw-us.webmethods-stage.io/tms/v1/tenants' --header 'Accept: application/json' -o ./output/stage.json

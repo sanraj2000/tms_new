@@ -20,7 +20,7 @@
 
     <script>
       
-        </script>
+    </script>
 
 </head>
 
@@ -42,9 +42,9 @@
         <button class="tablinks" onclick="connectorTabs('DEVTENANTS')"  id="defaultOpen" style="background: darkseagreen;">DEV</button>
         <button class="tablinks" onclick="connectorTabs('STAGETENANTS') " style="background: darkseagreen;">STAGE</button>        
         <button class="tablinks" onclick="connectorTabs('INTTENANTS')" style="background: darkseagreen;">INT</button>
-       
-
-      </div>
+        <button class="tablinks" onclick="connectorTabs('ACTION')" id="defaultOpen3" style="background: darkturquoise;">ACTION HANDLERS</button>
+        <button class="tablinks" onclick="connectorTabs('TESTJOBS')" style="background: darkturquoise;">TEST JOBS</button>   
+     </div>
     
  
 
@@ -52,98 +52,35 @@
 
 <div id="DEVTENANTS" class="container-fluid wmiotabtype tabcontent">
     <div class="container-fluid row">        
-
-            <p class="lead"> DEV  : {{ totalCount_cc2 }}</p>
-
+       <p class="lead"> # DEV TENANTS : {{ totalCount_cc2 }}</p>
     </div>
  
     <br />
 
    <!-- new sear4ch-->
- <div class="row   " style="padding: 10px; background-color: #F2F2EA ; "> 
-
-    <div class="row" style="width: 100%;">
-        <div class="col-md-2">
-            Search By:
-            <select class="form-control" ng-model='SearchTerm'>
-                <option value='$'>Any</option>
-                <option value='tenantName'>Name</option>
-                <option value='tier'>Type</option>
-                <option value='currentVersion'>Version</option>
-                <option value='tenantStatus'>Status</option>
-            </select>
+     <div class="row">
+            <div class="col-md-4">
+                Search By:
+                <select class="form-control" ng-model='SearchTerm'>
+                    <option value='$'>Any</option>
+                    <option value='tenantName'>Name</option>
+                    <option value='tier'>Type</option>
+                    <option value='currentVersion'>Version</option>
+                    <option value='tenantStatus'>Status</option>
+                </select>
+            </div>
+            <div class="col-md-8">
+                Search Key:
+                <input type="text" class="form-control" ng-model="searchKeyword[SearchTerm]">
+            </div>
         </div>
-        <div class="col-md-4">
-            Search Key:
-            <input type="text" class="form-control" ng-model="searchKeyword[SearchTerm]">
-        </div>
+        <br />
 
-        <div class="col-md-3">
-            Search By Type:
-            <select class="form-control" ng-model="searchKeyword['tier']">
-                <option value=""> All </option>
-                     <option value="TRIAL">TRIAL</option>
-                     <option value="PAID_BASIC">PAID_BASIC</option>
-                     <option value="PAID_ENTERPRISE">PAID_ENTERPRISE</option>
-                     <option value="PAID_ADVANCED">PAID_ADVANCED</option>
-                     <option value="PAID_OTHERS">PAID_OTHERS</option>
-                     
-        </select>    
-
-        </div>
-
-        <div class="col-md-2">
-            Search By Status:
-            <select class="form-control" ng-model="searchKeyword['tenantStatus']">
-                <option value=""> All </option>
-                <option value="STOPPED">STOPPED</option>
-                <option value="DEPLOYED">DEPLOYED</option>
-                <option value="DELETE_FAILED">DELETE_FAILED</option>
-                <option value="DEPLOYED">DEPLOYED</option>
-                <option value="FIX_UPGRADE_FAILED">FIX_UPGRADE_FAILED</option>
-                <option value="FIX_UPGRADE_SCHEDULED">FIX_UPGRADE_SCHEDULED</option>
-                     
-        </select>    
-
-        </div>
-
-        <div class="col-md-1">
-         Page Count : 
-        <select ng-model="pageSize1" id="pageSize1" class="form-control" style="width: 80px;">
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-            <option value="20">30</option>
-            <option value="50">50</option>
-         </select>
-        </div>
-    </div>
-
-</div>
-<!-- new search end-->
+ 
+    <!-- new search end-->
                 
 
-    <div class="row myreposBlock" style="padding: 10px; background-color: #F2F2EA ; " >
-        <div class="col" style="float: right; text-align: center;">
-
-            <button ng-disabled="currentPage1 == 0" ng-click="currentPage1=currentPage1-1">
-                Previous
-            </button>
-            {{currentPage1+1}}/{{numberOfPages1()}}
-            <button ng-disabled="currentPage1 >= getData1().length/pageSize1 - 1" ng-click="currentPage1=currentPage1+1">
-                Next
-            </button>
-         </div>
-         
-    <div class="row  "  >
-        <div class="col" style="float: right; text-align: center;">
-            <label>Count : {{ allrows_cconns2.length }}</label>  
-           
-         </div>
-    </div>
-    </div>
-
+   
 
     <table class="table table-striped table-hover table-bordered">
         <tr>
@@ -168,33 +105,69 @@
         </tr>
       </table>
 </div>
+    <!------------------------------------------------------------------------>
+<div id="ACTION567" class="container-fluid wmiotabtype tabcontent">
+ <div class="row">
+  <div class="col-sm-6">
+    <div class="card  bg-light">
+      <div class="card-body">
+        <h5 class="card-title">
+            TRUNK
+        </h5>
+        <ul class="list-group list-group-flush">                                                                                                               
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card bg-light ">
+      <div class="card-body">
+        <h5 class="card-title">
+            SPRO
+        </h5>
+        <ul class="list-group list-group-flush">
+         <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AZURE-SPRO-1011-SPLIT-RUN/" class="buttoninfo2" role="button" target="_blank">YAIC-AZURE-SPRO-1011-SPLIT-RUN</a></li>
+         <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AZURE-STAGE-BVT/" class="buttoninfo2" role="button" target="_blank">YAIC-AZURE-STAGE-BVT</a></li>
+         <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AZURE-STAGE-BVT-SPRO-1011/" class="buttoninfo2" role="button" target="_blank">YAIC-AZURE-STAGE-BVT-SPRO-1011</a></li>
+       </ul>
+       
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+    
+    
+    
+    
+    
 <!-- STAGE TENANTS          -->
       
-      <div id="STAGETENANTS" class="container-fluid wmiotabtype tabcontent">
-        <div class="container-fluid row">
-            <p class="lead"> STAGE  : {{ totalCount_cc }}</p>
-        </div>
+<div id="STAGETENANTS" class="container-fluid wmiotabtype tabcontent">
+  <div class="container-fluid row">
+      <p class="lead"> # STAGE TENANTS  : {{ totalCount_cc }}</p>
+  </div>
 
-        <div class="row">
-            <div class="col-md-4">
-                Search By:
-                <select class="form-control" ng-model='SearchTerm'>
-                    <option value='$'>Any</option>
-                    <option value='tenantName'>Name</option>
-                    <option value='tier'>Type</option>
-                    <option value='currentVersion'>Version</option>
-                    <option value='tenantStatus'>Status</option>
-                </select>
-            </div>
-            <div class="col-md-8">
-                Search Key:
-                <input type="text" class="form-control" ng-model="searchKeyword[SearchTerm]">
-            </div>
+  <div class="row">
+        <div class="col-md-4">
+         Search By:
+         <select class="form-control" ng-model='SearchTerm'>
+         <option value='$'>Any</option>
+         <option value='tenantName'>Name</option>
+         <option value='tier'>Type</option>
+         <option value='currentVersion'>Version</option>
+         <option value='tenantStatus'>Status</option>
+         </select>
         </div>
+        <div class="col-md-8">
+            Search Key:
+           <input type="text" class="form-control" ng-model="searchKeyword[SearchTerm]">
+        </div>
+    </div>
         <br />
 
 
-        <table class="table table-striped table-hover table-bordered" >
+    <table class="table table-striped table-hover table-bordered" >
             <tr>
                 <th style="width: 50px;">ID</th>
                 <th style="width: 200px;">Tenant Name</th>
@@ -213,8 +186,8 @@
               <td>{{ formatDate(connD.creationDate) }}</td>
               <td>{{ formatDate(connD.latestChangeDate) }}</td>
             </tr>
-          </table>
-     </div>
+    </table>
+</div>
 
 
 
@@ -223,7 +196,7 @@
     <div id="INTTENANTS" class="container-fluid wmiotabtype tabcontent">
         
         <div class="container-fluid row">
-            <p class="lead"> INT  : {{ totalCount_cc3 }}</p>
+            <p class="lead"># INT TENANTS  : {{ totalCount_cc3 }}</p>
         </div>
         <div class="row">
             <div class="col-md-4">
@@ -250,6 +223,7 @@
                 <th style="width: 200px;">Tenant Name</th>
                 <th style="width: 200px;">Type</th>
                 <th style="width: 200px;">Status</th>
+                <th style="width: 200px;">Email</th>
                 <th style="width: 200px;">Version</th>
                 <th style="width: 200px;">Created</th>
                 <th style="width: 200px;">Updated</th>
@@ -259,25 +233,163 @@
               <td>{{ connD2.tenantName }}</td>
               <td>{{ connD2.tier }}</td>
               <td>{{ connD2.tenantStatus }}</td>
+              <td>{{ connD2.tenantEmail }}</td>  
               <td>{{ formatVersion(connD2.currentVersion) }}</td>
               <td>{{ formatDate(connD2.creationDate) }}</td>
               <td>{{ formatDate(connD2.latestChangeDate) }}</td>
             </tr>
           </table>
   </div>
- 
-
-
- 
-        </div>
+ <!----------------TEST JOBS-------------------->
+    
+ <div id="TESTJOBS" class="container-fluid wmiotabtype tabcontent">
+    <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 100px;">
+        <button class="tablinks" onclick="connectorTabs2('AWSTEST')" style=" background: darkseagreen; width: 100%;" id="defaultOpen2">AZURE </button>
     </div>
+    <div id="AWSTEST" class="  wmiotabtype2 tabcontent"> 
+        <div><div>
+            <div class="row">
+                <div class="col-sm-6">
+                      <div class="card  bg-light">
+                          <div class="card-body">
+                               <h5 class="card-title">
+                                   TRUNK
+                                </h5>
+                                <ul class="list-group list-group-flush">
+                                 </ul>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-sm-6">
+                    <div class="card bg-light ">
+                         <div class="card-body">
+                            <h5 class="card-title">
+                                SPRO
+                            </h5>
+                            <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AZURE-SPRO-1011-SPLIT-RUN/" class="buttoninfo2" role="button" target="_blank">YAIC-AZURE-SPRO-1011-SPLIT-RUN</a></li>
+                            <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AZURE-STAGE-BVT/" class="buttoninfo2" role="button" target="_blank">YAIC-AZURE-STAGE-BVT</a></li>
+                            <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AZURE-STAGE-BVT-SPRO-1011/" class="buttoninfo2" role="button" target="_blank">YAIC-AZURE-STAGE-BVT-SPRO-1011</a></li>
+                            </ul>
+       
+                         </div>
+                    </div>
+                </div>
+            </div>
+       <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 100px;">
+        <button class="tablinks"  style="background: darkturquoise; width: 100%;" >AWS</button>
+       </div>
+    
+       <div class="row">
+            <div class="col-sm-6">
+                  <div class="card  bg-light">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                            TRUNK
+                        </h5>
+          
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-DEV-BVT/"  class="buttoninfo2" role="button" target="_blank" >YAIC-AWS-DEV-BVT </a></li>
+                            <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-DEV-BVT-PARALLEL/" class="buttoninfo2" role="button" target="_blank">YAIC-AWS-DEV-BVT-PARALLEL</a></li>
+                            <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-DEV-BVT-SPLIT-RUN/" class="buttoninfo2" role="button" target="_blank" >YAIC-AWS-DEV-BVT-SPLIT-RUN</a></li>
+                            <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-DEV-BVT-SPLIT-RUN_PARTIAL/" class="buttoninfo2" role="button" target="_blank" >YAIC-AWS-DEV-BVT-SPLIT-RUN_PARTIAL</a></li>
+                            <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-INT-BVT/" class="buttoninfo2" role="button" target="_blank" >YAIC-AWS-INT-BVT</a></li>        
+                        </ul>
 
-        </div>
+                       </div>
+                   </div>
+                </div>
+            <div class="col-sm-6">
+                <div class="card bg-light ">
+                     <div class="card-body">
+                       <h5 class="card-title">SPRO</h5>
+                       <ul class="list-group list-group-flush">
+                         <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-SPRO-1012-SPLIT-RUN/" class="buttoninfo2" role="button" target="_blank" >YAIC-AWS-SPRO-1012-SPLIT-RUN</a></li>         
+                         <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-STAGE-BVT/" class="buttoninfo2" role="button" target="_blank" >YAIC-AWS-STAGE-BVT</a></li>
+                         <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-STAGE-BVT-SPLIT-RUN-1011/" class="buttoninfo2" role="button" target="_blank" >YAIC-AWS-STAGE-BVT-SPLIT-RUN-1011</a></li>
+                         <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-STAGE-BVT-SPRO-1011/" class="buttoninfo2" role="button" target="_blank" >YAIC-AWS-STAGE-BVT-SPRO-1011</a></li>
+                      </ul>
+       
+                    </div>
+               </div>
+            </div>
+        
+        </div>     
+            
+    
+            
+     <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 200px;">
+       <button class="tablinks"  style="background: darkturquoise; width: 100%;" >NON FUNCTIONAL</button>
+     </div>
+     <div class="row">
+        <div class="col-sm-6">
+            <div class="card  bg-light">
+                 <div class="card-body">
+                    <h5 class="card-title">CHAOS-TESTS</h5>
+          
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-CHAOS-TESTS/"  class="buttoninfo2" role="button" target="_blank"  >YAIC-CHAOS-TESTS</a></li>
+                      <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-UPGRADE-END-TO-END/" class="buttoninfo2 role="button" target="_blank" >YAIC-UPGRADE-END-TO-END</a></li>
+                                    
+                     </ul>
+        
+                  </div>
+            </div>
+        </div>  
+    </div>  
+    </div>        
+            
+            
+    
+       
 
+    
+   
+            
+    <!----------------CI/CD ACTIONS HANDLERS------------------->
+ <div id="ACTION" class="container-fluid wmiotabtype tabcontent">
+ <div class="row">
+  <div class="col-sm-6">
+    <div class="card  bg-light">
+      <div class="card-body">
+        <h5 class="card-title">
+            TRUNK
+        </h5>
+        <ul class="list-group list-group-flush">                                                                                                               
+        </ul>
+      </div>
     </div>
-
-
+  </div>
+  <div class="col-sm-6">
+    <div class="card bg-light ">
+      <div class="card-body">
+        <h5 class="card-title">
+            SPRO
+        </h5>
+        <ul class="list-group list-group-flush">
+         <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AZURE-SPRO-1011-SPLIT-RUN/" class="buttoninfo2" role="button" target="_blank">YAIC-AZURE-SPRO-1011-SPLIT-RUN</a></li>
+         <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AZURE-STAGE-BVT/" class="buttoninfo2" role="button" target="_blank">YAIC-AZURE-STAGE-BVT</a></li>
+         <li class="list-group-item"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AZURE-STAGE-BVT-SPRO-1011/" class="buttoninfo2" role="button" target="_blank">YAIC-AZURE-STAGE-BVT-SPRO-1011</a></li>
+       </ul>
+       
+      </div>
+    </div>
+  </div>
+ </div>
 </div>
+    
+           
+ 
+            
+        
+        
+        
+        
+        
+        
+     
+
+
 
 
 

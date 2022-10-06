@@ -162,9 +162,10 @@
         
         <div id="AWSTEST" class="  wmiotabtype2 tabcontent">
             <div class="accordion" ng-class="{active:accordion==10}">
-            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">DEV</button> </div>
-            <li class="accordion-content" ng-show="accordion==10">
-               <div class="row">
+            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;" ng-click="accordion = 10" >DEV</button> </div>
+             <div class="accordion-content" ng-show="accordion==10">
+                
+                <div class="row">
                 <div class="col-sm-6">
                     <div class="card  bg-light">
                         <div class="card-body">
@@ -270,8 +271,7 @@
                         </div>
                     </div>
                 </div>
-                   </li>
-            </div>
+                 </div>    
             </div>
             <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">INT</button> </div>
             <div class="row">
@@ -520,6 +520,7 @@
                         </div>
                     </div>
                 </div>                        
+            </div>
             </div>
         </div>    
         <div id="AZURETEST" class="  wmiotabtype2 tabcontent">

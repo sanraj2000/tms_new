@@ -161,11 +161,8 @@
         <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 25%;"> <button class="tablinks" onclick="connectorTabs2('AWSTEST')" style=" background: darkseagreen; width: 31%;" id="defaultOpen2">AWS </button> <button class="tablinks" onclick="connectorTabs2('AZURETEST')" style=" background: darkseagreen; width: 31%;">AZure </button> <button class="tablinks" onclick="connectorTabs2('NONFUNCTIONAL')" style=" background: darkseagreen; width: 38%;">NonFunctional </button> </div>
         
         <div id="AWSTEST" class="  wmiotabtype2 tabcontent">
-            <div class="accordion" ng-class="{active:accordion==1}">
-            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;" ng-click="accordion = 1" >DEV</button> </div>
-             <div class="accordion-content" ng-show="accordion==1">
-                
-                <div class="row">
+            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">DEV</button> </div>
+            <div class="row">
                 <div class="col-sm-6">
                     <div class="card  bg-light">
                         <div class="card-body">
@@ -271,12 +268,9 @@
                         </div>
                     </div>
                 </div>
-                 </div>    
             </div>
-            <div class="accordion" ng-class="{active:accordion==2}">    
-            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;" ng-click="accordion = 2" >INT</button> </div>
-            <div class="accordion-content" ng-show="accordion==2">
-             <div class="row">
+            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">INT</button> </div>
+            <div class="row">
                 <div class="col-sm-6">
                     <div class="card  bg-light">
                         <div class="card-body">
@@ -316,12 +310,8 @@
                         </div>
                     </div>
                 </div>
-                </div>
-                </div>
             </div>
-            <div class="accordion" ng-class="{active:accordion==3}">    
-            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;" ng-click="accordion = 3" >PREPROD</button> </div>
-            <div class="accordion-content" ng-show="accordion==3">
+            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">PREPROD</button> </div>
             <div class="row">
                 <div class="col-sm-6">
                     <div class="card  bg-light">
@@ -383,13 +373,9 @@
                         </div>
                     </div>
                 </div>
-                </div>
-                </div>
             </div>
-            <div class="accordion" ng-class="{active:accordion==4}">    
-            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;" ng-click="accordion = 4" >PROD</button> </div>
-            <div class="accordion-content" ng-show="accordion==4">
-             <div class="row">
+            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">PROD</button> </div>
+            <div class="row">
                 <div class="col-sm-6">
                     <div class="card  bg-light">
                         <div class="card-body">
@@ -448,13 +434,9 @@
                         </div>
                     </div>
                 </div>
-                </div>
-                </div>
             </div>
-            <div class="accordion" ng-class="{active:accordion==5}">    
-            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 200px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;" ng-click="accordion = 5" >STAGE</button> </div>
-             <div class="accordion-content" ng-show="accordion==5">
-                <div class="row">
+            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 200px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">STAGE</button> </div>
+              <div class="row">
                 <div class="col-sm-6">
                     <div class="card  bg-light">
                         <div class="card-body">
@@ -533,13 +515,12 @@
                             </ul>
                         </div>
                     </div>
-                </div>                       
+                </div>                        
+            </div>
         </div>    
         <div id="AZURETEST" class="  wmiotabtype2 tabcontent">
-            <div class="accordion" ng-class="{active:accordion==6}">
-            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;" ng-click="accordion = 6" >PRE PROD</button> </div>
-            <div class="accordion-content" ng-show="accordion==6">
-                <div class="row">
+            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">PRE PROD</button> </div>
+            <div class="row">
                 <div class="col-sm-6">
                     <div class="card  bg-light">
                         <div class="card-body">
@@ -604,13 +585,9 @@
                         </div>
                     </div>
                 </div>
-                </div>
-                </div>
             </div>
-            <div class="accordion" ng-class="{active:accordion==7}">
-            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;" ng-click="accordion = 7" >PROD</button> </div>
-             <div class="accordion-content" ng-show="accordion==7">
-                <div class="row">
+            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">PROD</button> </div>
+            <div class="row">
                 <div class="col-sm-6">
                     <div class="card  bg-light">
                         <div class="card-body">
@@ -673,8 +650,6 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                 </div>
                 </div>
             </div>
             <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 200px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">STAGE</button> </div>

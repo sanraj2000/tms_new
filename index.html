@@ -522,13 +522,16 @@
         <div id="AWSTEST" class="  wmiotabtype2 tabcontent">
             <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">DEV</button> </div>
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-12">
                     <div class="card  bg-light">
                         <div class="card-body">
                             <h5 class="card-title">TRUNK</h5>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
-                                    <table class="table table-striped table-hover table-bordered " >
+                                    
+                                     <div class="row">
+                                     <div class=" col-sm-6" > 	
+                                     <table class="table table-striped table-hover table-bordered " >
                                         <tr>
                                             <th colspan="2" class="text-center"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-DEV-BVT/" target="_blank">YAIC-AWS-DEV-BVT </a></th>
                                         </tr>    
@@ -545,10 +548,10 @@
                                             <th> Status</th>
                                             <td> {{aw1showstatus}}</td>
                                         </tr>
-                                    </table>  
-                                </li>
-                                <li class="list-group-item">
-                                    <table class="table table-striped table-hover table-bordered " >
+                                    </table>
+                                    </div>
+                                    <div class=" col-sm-6" >
+                                     <table class="table table-striped table-hover table-bordered " >
                                         <tr>
                                             <th colspan="2" class="text-center"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-DEV-BVT-PARALLEL/" target="_blank">YAIC-AWS-DEV-BVT-PARALLEL</a></th>
                                         </tr>    
@@ -566,6 +569,7 @@
                                             <td> {{aw2showstatus}}</td>
                                         </tr>
                                     </table>
+                                    </div>
                                 </li>
                                 <li class="list-group-item">
                                     <table class="table table-striped table-hover table-bordered " >
@@ -608,17 +612,6 @@
                                     </table>
                                 </li>
                                 
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card bg-light ">
-                        <div class="card-body">
-                            <h5 class="card-title">SPRO</h5>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                </li>
                             </ul>
                         </div>
                     </div>

@@ -70,94 +70,221 @@
     </div>
     <!------------------------------------------------------------------------>
     <div id="BUILDJOBS" class="container-fluid wmiotabtype tabcontent">
-        <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 25%;"> <button class="tablinks" onclick="connectorTabs3('TENFIVE')" style=" background: darkseagreen;" id="defaultOpen3">10.5 </button> <button class="tablinks" onclick="connectorTabs3('TENSEVEN')" style=" background: darkseagreen;">10.7 </button> <button class="tablinks" onclick="connectorTabs3('TENELVEN')" style=" background: darkseagreen; ">10.11 </button> </div>
-        <div id="TENFIVE" class=" wmiotabtype3 tabcontent">
-        <div class="container-fluid row">
-            <p class="lead"> # DEV TENANTS : {{ totalCount_cc2 }}</p>
-        </div> <br /> <!-- new sear4ch-->
-        <div class="row">
-            <div class="col-md-4"> Search By: <select class="form-control" ng-model='SearchTerm'>
-                    <option value='$'>Any</option>
-                    <option value='tenantName'>Name</option>
-                    <option value='tier'>Type</option>
-                    <option value='currentVersion'>Version</option>
-                    <option value='tenantStatus'>Status</option>
-                </select> </div>
-            <div class="col-md-8"> Search Key: <input type="text" class="form-control" ng-model="searchKeyword[SearchTerm]"> </div>
-        </div> <br /> <!-- new search end-->
-        <table class="table table-striped table-hover table-bordered">
-            <tr>
-                <th style="width: 50px;">ID</th>
-                <th style="width: 200px;">Tenant Name</th>
-                <th style="width: 200px;">Type</th>
-                <th style="width: 200px;">Status</th>
-                <th style="width: 200px;">Email</th>
-                <th style="width: 200px;">Version</th>
-                <th style="width: 200px;">Created</th>
-                <th style="width: 200px;">Updated</th>
-            </tr>
-            <tr ng-repeat="connD2 in allrows_cconns2 | orderBy : 'tenantName' | filter: searchKeyword | startFrom:currentPage1*pageSize1 | limitTo:pageSize1">
-                <td>{{ $index+1 }}</td>
-                <td>{{ connD2.tenantName }}</td>
-                <td>{{ connD2.tier }}</td>
-                <td>{{ connD2.tenantStatus }}</td>
-                <td>{{ connD2.tenantEmail }}</td>
-                <td> {{ formatVersion(connD2.currentVersion) }} </td>
-                <td> {{ formatDate(connD2.creationDate) }} </td>
-                <td> {{ formatDate(connD2.latestChangeDate) }} </td>
-            </tr>
-        </table>
-    </div>
-        <div id="TENSEVEN" class=" wmiotabtype3 tabcontent">
-        <div class="container-fluid row">
-            <p class="lead"> INT TENANTS : {{ totalCount_cc2 }}</p>
-        </div> <br /> <!-- new sear4ch-->
-        <div class="row">
-            <div class="col-md-4"> Search By: <select class="form-control" ng-model='SearchTerm'>
-                    <option value='$'>Any</option>
-                    <option value='tenantName'>Name</option>
-                    <option value='tier'>Type</option>
-                    <option value='currentVersion'>Version</option>
-                    <option value='tenantStatus'>Status</option>
-                </select> </div>
-            <div class="col-md-8"> Search Key: <input type="text" class="form-control" ng-model="searchKeyword[SearchTerm]"> </div>
-        </div> <br /> <!-- new search end-->
-        <table class="table table-striped table-hover table-bordered">
-            <tr>
-                <th style="width: 50px;">ID</th>
-                <th style="width: 200px;">Tenant Name</th>
-                <th style="width: 200px;">Type</th>
-                <th style="width: 200px;">Status</th>
-                <th style="width: 200px;">Email</th>
-                <th style="width: 200px;">Version</th>
-                <th style="width: 200px;">Created</th>
-                <th style="width: 200px;">Updated</th>
-            </tr>
-            <tr ng-repeat="connD2 in allrows_cconns2 | orderBy : 'tenantName' | filter: searchKeyword | startFrom:currentPage1*pageSize1 | limitTo:pageSize1">
-                <td>{{ $index+1 }}</td>
-                <td>{{ connD2.tenantName }}</td>
-                <td>{{ connD2.tier }}</td>
-                <td>{{ connD2.tenantStatus }}</td>
-                <td>{{ connD2.tenantEmail }}</td>
-                <td> {{ formatVersion(connD2.currentVersion) }} </td>
-                <td> {{ formatDate(connD2.creationDate) }} </td>
-                <td> {{ formatDate(connD2.latestChangeDate) }} </td>
-            </tr>
-        </table>
-    </div>
-        <div class="card text-center">
-            <div class="card-header">
-                <ul class="nav nav-tabs card-header-tabs">
-                    <li class="nav-item"> <a class="nav-link active" href="#">Active</a> </li>
-                    <li class="nav-item"> <a class="nav-link active" href="#">Link</a> </li>
-                    <li class="nav-item"> <a class="nav-link active" href="#">Disabled</a> </li>
-                </ul>
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+        <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 35%;"> <button class="tablinks" onclick="connectorTabs3('TENONE')" style=" background: darkseagreen;" id="defaultOpen3">10.1 </button>  <button class="tablinks" onclick="connectorTabs3('TENFIVE')" style=" background: darkseagreen;" >10.5 </button> <button class="tablinks" onclick="connectorTabs3('TENSEVEN')" style=" background: darkseagreen;">10.7 </button> <button class="tablinks" onclick="connectorTabs3('TENELVEN')" style=" background: darkseagreen; ">10.11 </button> <button class="tablinks" onclick="connectorTabs3('TENFIVETEEN')" style=" background: darkseagreen;" >10.15 </button> <button class="tablinks" onclick="connectorTabs3('TRUNK')" style=" background: darkseagreen;" >TRUNK </button>  </div>
+        <div id="TENONE" class=" wmiotabtype3 tabcontent">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card  bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title">TRUNK</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  
+    	
+                                     <table class="table table-striped table-hover table-bordered " style="margin-left: 25%;  width: 50%;" >
+                                        <tr>
+                                            <th colspan="2" class="text-center"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AZURE-PREPROD-BVT/" target="_blank">YAIC-AZURE-PREPROD-BVT 101</a></th>
+                                        </tr>    
+                                          
+                                        <tr>
+                                            <th> Build # </th>
+                                            <td>{{az1showbuild}}</td>
+                                         </tr>
+                                         <tr>
+                                            <th> Date </th>
+                                            <td>{{az1showtime | date: 'dd-MM-yyyy  h:mm:ss a'}}</td>
+                                         </tr>
+                                         <tr>
+                                            <th> Status</th>
+                                            <td> {{az1showstatus}}</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card bg-light ">
+                        <div class="card-body">
+                            <h5 class="card-title">SPRO</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  
+    	
+                                     <table class="table table-striped table-hover table-bordered " style="margin-left: 25%;  width: 50%;" >
+                                        <tr>
+                                            <th colspan="2" class="text-center"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AZURE-PREPROD-BVT-SPRO/" target="_blank">YAIC-AZURE-PREPROD-BVT-SPRO </a></th>
+                                        </tr>    
+                                          
+                                        <tr>
+                                            <th> Build # </th>
+                                            <td>{{az2showbuild}}</td>
+                                         </tr>
+                                         <tr>
+                                            <th> Date </th>
+                                            <td>{{az2showtime | date: 'dd-MM-yyyy  h:mm:ss a'}}</td>
+                                         </tr>
+                                         <tr>
+                                            <th> Status</th>
+                                            <td> {{az2showstatus}}</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+       
+       
         </div>
+        <div id="TENFIVE" class=" wmiotabtype3 tabcontent">
+       <div class="row">
+                <div class="col-sm-6">
+                    <div class="card  bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title">TRUNK</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  
+    	
+                                     <table class="table table-striped table-hover table-bordered " style="margin-left: 25%;  width: 50%;" >
+                                        <tr>
+                                            <th colspan="2" class="text-center"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AZURE-PREPROD-BVT/" target="_blank">YAIC-AZURE-PREPROD-BVT 10 12</a></th>
+                                        </tr>    
+                                          
+                                        <tr>
+                                            <th> Build # </th>
+                                            <td>{{az1showbuild}}</td>
+                                         </tr>
+                                         <tr>
+                                            <th> Date </th>
+                                            <td>{{az1showtime | date: 'dd-MM-yyyy  h:mm:ss a'}}</td>
+                                         </tr>
+                                         <tr>
+                                            <th> Status</th>
+                                            <td> {{az1showstatus}}</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card bg-light ">
+                        <div class="card-body">
+                            <h5 class="card-title">SPRO</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  
+    	
+                                     <table class="table table-striped table-hover table-bordered " style="margin-left: 25%;  width: 50%;" >
+                                        <tr>
+                                            <th colspan="2" class="text-center"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AZURE-PREPROD-BVT-SPRO/" target="_blank">YAIC-AZURE-PREPROD-BVT-SPRO </a></th>
+                                        </tr>    
+                                          
+                                        <tr>
+                                            <th> Build # </th>
+                                            <td>{{az2showbuild}}</td>
+                                         </tr>
+                                         <tr>
+                                            <th> Date </th>
+                                            <td>{{az2showtime | date: 'dd-MM-yyyy  h:mm:ss a'}}</td>
+                                         </tr>
+                                         <tr>
+                                            <th> Status</th>
+                                            <td> {{az2showstatus}}</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+        </div>
+        
+        
+        
+        
+        <div id="TENSEVEN" class=" wmiotabtype3 tabcontent">
+         <div class="row">
+                <div class="col-sm-6">
+                    <div class="card  bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title">TRUNK</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  
+    	
+                                     <table class="table table-striped table-hover table-bordered " style="margin-left: 25%;  width: 50%;" >
+                                        <tr>
+                                            <th colspan="2" class="text-center"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AZURE-PREPROD-BVT/" target="_blank">YAIC-AZURE-PREPROD-BVT </a></th>
+                                        </tr>    
+                                          
+                                        <tr>
+                                            <th> Build # </th>
+                                            <td>{{az1showbuild}}</td>
+                                         </tr>
+                                         <tr>
+                                            <th> Date </th>
+                                            <td>{{az1showtime | date: 'dd-MM-yyyy  h:mm:ss a'}}</td>
+                                         </tr>
+                                         <tr>
+                                            <th> Status</th>
+                                            <td> {{az1showstatus}}</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card bg-light ">
+                        <div class="card-body">
+                            <h5 class="card-title">SPRO</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  
+    	
+                                     <table class="table table-striped table-hover table-bordered " style="margin-left: 25%;  width: 50%;" >
+                                        <tr>
+                                            <th colspan="2" class="text-center"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AZURE-PREPROD-BVT-SPRO/" target="_blank">YAIC-AZURE-PREPROD-BVT-SPRO </a></th>
+                                        </tr>    
+                                          
+                                        <tr>
+                                            <th> Build # </th>
+                                            <td>{{az2showbuild}}</td>
+                                         </tr>
+                                         <tr>
+                                            <th> Date </th>
+                                            <td>{{az2showtime | date: 'dd-MM-yyyy  h:mm:ss a'}}</td>
+                                         </tr>
+                                         <tr>
+                                            <th> Status</th>
+                                            <td> {{az2showstatus}}</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+            
+        
+        </div>
+        
     </div> <!-- STAGE TENANTS          -->
     <div id="STAGETENANTS" class="container-fluid wmiotabtype tabcontent">
         <div class="container-fluid row">

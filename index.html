@@ -30,7 +30,7 @@
         <p id="demo"></p>
         <p id="demo1"></p>
     </div>
-    <div class="tab" style="margin-left: 5%; margin-right: 5%; margin-top: 20px;"> <button class="tablinks" onclick="connectorTabs('DEVTENANTS')" id="defaultOpen" style="background: darkseagreen; width: 8%;"> DEV </button> <button class="tablinks" onclick="connectorTabs('STAGETENANTS') " style="background: darkseagreen; width: 8%;">STAGE</button> <button class="tablinks" onclick="connectorTabs('INTTENANTS')" style="background: darkseagreen; width: 8%;">INT</button>  <button class="tablinks" onclick="connectorTabs('TESTJOBS')" style="background: darkturquoise;">TEST JOBS</button> </div> <!-- DEV TENANTS          -->
+    <div class="tab" style="margin-left: 5%; margin-right: 5%; margin-top: 20px;"> <button class="tablinks" onclick="connectorTabs('DEVTENANTS')" id="defaultOpen" style="background: darkseagreen; width: 8%;"> DEV </button> <button class="tablinks" onclick="connectorTabs('STAGETENANTS') " style="background: darkseagreen; width: 8%;">STAGE</button> <button class="tablinks" onclick="connectorTabs('INTTENANTS')" style="background: darkseagreen; width: 8%;">INT</button>  <button class="tablinks" onclick="connectorTabs('TESTJOBS')" style="background: darkturquoise;">TEST JOBS</button> <button class="tablinks" onclick="connectorTabs('BUILDJOBS') " style="background: darkseagreen;">BUILD JOBS</button> </div> <!-- DEV TENANTS          -->
     <div id="DEVTENANTS" class="container-fluid wmiotabtype tabcontent">
         <div class="container-fluid row">
             <p class="lead"> # DEV TENANTS : {{ totalCount_cc2 }}</p>
@@ -844,6 +844,47 @@
             </div>
         </div>    
             <!----------------CI/CD ACTIONS HANDLERS------------------->
+        
+        
+        
+        
+        <div id="BUILDJOBS" class="container-fluid wmiotabtype tabcontent">
+        <div class="container-fluid row">
+            <p class="lead"> # DEV TENANTS : {{ totalCount_cc2 }}</p>
+        </div> <br /> <!-- new sear4ch-->
+        <div class="row">
+            <div class="col-md-4"> Search By: <select class="form-control" ng-model='SearchTerm'>
+                    <option value='$'>Any</option>
+                    <option value='tenantName'>Name</option>
+                    <option value='tier'>Type</option>
+                    <option value='currentVersion'>Version</option>
+                    <option value='tenantStatus'>Status</option>
+                </select> </div>
+            <div class="col-md-8"> Search Key: <input type="text" class="form-control" ng-model="searchKeyword[SearchTerm]"> </div>
+        </div> <br /> <!-- new search end-->
+        <table class="table table-striped table-hover table-bordered">
+            <tr>
+                <th style="width: 50px;">ID</th>
+                <th style="width: 200px;">Tenant Name</th>
+                <th style="width: 200px;">Type</th>
+                <th style="width: 200px;">Status</th>
+                <th style="width: 200px;">Email</th>
+                <th style="width: 200px;">Version</th>
+                <th style="width: 200px;">Created</th>
+                <th style="width: 200px;">Updated</th>
+            </tr>
+            <tr ng-repeat="connD2 in allrows_cconns2 | orderBy : 'tenantName' | filter: searchKeyword | startFrom:currentPage1*pageSize1 | limitTo:pageSize1">
+                <td>{{ $index+1 }}</td>
+                <td>{{ connD2.tenantName }}</td>
+                <td>{{ connD2.tier }}</td>
+                <td>{{ connD2.tenantStatus }}</td>
+                <td>{{ connD2.tenantEmail }}</td>
+                <td> {{ formatVersion(connD2.currentVersion) }} </td>
+                <td> {{ formatDate(connD2.creationDate) }} </td>
+                <td> {{ formatDate(connD2.latestChangeDate) }} </td>
+            </tr>
+        </table>
+    </div>
     
     </div>
 </body>

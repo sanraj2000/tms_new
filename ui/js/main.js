@@ -916,6 +916,10 @@ $http(aztest1).then(function(response2) {
             if(tabName === "TESTJOBS"){
               document.getElementById('defaultOpen2').click();
             }
+		  
+	    if(tabName === "BUILDJOBS"){
+              document.getElementById('defaultOpen3').click();
+            }  
           }
           //// Get the element with id="defaultOpen" and click on it
           //  document.getElementById("defaultOpen").Click();
@@ -923,6 +927,16 @@ $http(aztest1).then(function(response2) {
 	 function connectorTabs2(tabName) {
             var i;
             var x = document.getElementsByClassName("wmiotabtype2");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+           
+          }
+	
+	 function connectorTabs3(tabName) {
+            var i;
+            var x = document.getElementsByClassName("wmiotabtype3");
             for (i = 0; i < x.length; i++) {
               x[i].style.display = "none";
             }

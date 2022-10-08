@@ -82,15 +82,15 @@
     <!------------------------------------------------------------------------>
     <div id="BUILDJOBS" class="container-fluid wmiotabtype tabcontent">
          <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 45%;"> 
-        <button class="tablinks" onclick="connectorTabs3('TENONE')" style=" background: darkseagreen;" id="defaultOpen3">10.1 </button> 
-        <button class="tablinks" onclick="connectorTabs3('TENFIVE')"  ng-click="changeCol()"
+        <button class="tablinks" onclick="connectorTabs3(event,'TENONE')" style=" background: darkseagreen;" id="defaultOpen3">10.1 </button> 
+        <button class="tablinks" onclick="connectorTabs3(event,'TENFIVE')"  ng-click="changeCol()"
                     id="{{ID}}">10.5 </button> 
-        <button class="tablinks" onclick="connectorTabs3('TENSEVEN')" (click)="isClicked = !isClicked" [class.myClass]="isClicked">10.7 </button> 
-        <button class="tablinks" onclick="connectorTabs3('TENELVEN')"  (click)="isClicked = !isClicked" [class.myClass]="isClicked">10.11 </button>
-        <button class="tablinks" onclick="connectorTabs3('TENTWELVE')" ng-click="changeCol()"
+        <button class="tablinks" onclick="connectorTabs3(event,'TENSEVEN')" (click)="isClicked = !isClicked" [class.myClass]="isClicked">10.7 </button> 
+        <button class="tablinks" onclick="connectorTabs3(event,'TENELVEN')"  (click)="isClicked = !isClicked" [class.myClass]="isClicked">10.11 </button>
+        <button class="tablinks" onclick="connectorTabs3(event,'TENTWELVE')" ng-click="changeCol()"
                     id="{{ID}}">10.12 </button>
-        <button class="tablinks" onclick="connectorTabs3('TENFIFTEEN')" style=" background: darkseagreen;">10.15 </button>
-        <button class="tablinks" onclick="connectorTabs3('TRUNK')" style=" background: darkseagreen;">TRUNK </button> </div>
+        <button class="tablinks" onclick="connectorTabs3(event,'TENFIFTEEN')" style=" background: darkseagreen;">10.15 </button>
+        <button class="tablinks" onclick="connectorTabs3(event,'TRUNK')" style=" background: darkseagreen;">TRUNK </button> </div>
     <div id="TENONE" class=" wmiotabtype3 tabcontent">
         <div class="row">
             <div class="col-sm-6">
@@ -530,7 +530,7 @@
     </div>
     <!----------------TEST JOBS-------------------->
     <div id="TESTJOBS" class="container-fluid wmiotabtype tabcontent">
-        <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 25%;"> <button class="tablinks" onclick="connectorTabs2('AWSTEST')" style="  width: 31%;" id="defaultOpen2">AWS </button> <button class="tablinks" onclick="connectorTabs2('AZURETEST')" style="  width: 31%;">AZure </button> <button class="tablinks" onclick="connectorTabs2('NONFUNCTIONAL')" style="  width: 38%;">NonFunctional </button> </div>
+        <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 25%;"> <button class="tablinks" onclick="connectorTabs2(event, 'AWSTEST')" style="  width: 31%;" id="defaultOpen2">AWS </button> <button class="tablinks" onclick="connectorTabs2(event, 'AZURETEST')" style="  width: 31%;">AZure </button> <button class="tablinks" onclick="connectorTabs2(event, 'NONFUNCTIONAL')" style="  width: 38%;">NonFunctional </button> </div>
         
         <div id="AWSTEST" class="  wmiotabtype2 tabcontent">
             <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">DEV</button> </div>

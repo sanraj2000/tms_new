@@ -6,7 +6,10 @@ console.log("started");
 	var app = angular.module('cetApp', []);
 	app.controller('cetCtrl', function($scope,$http,$window, $location, $anchorScroll, $timeout,$filter) {
 
-
+		$scope.ID = 'blue';
+            $scope.changeCol = function() {
+                $scope.ID = "green";
+            };
  	    var isClicked = false;	
             // DEV
             var reposinfo2 = {

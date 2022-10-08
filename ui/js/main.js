@@ -7,7 +7,7 @@ console.log("started");
 	app.controller('cetCtrl', function($scope,$http,$window, $location, $anchorScroll, $timeout,$filter) {
 
 
- 
+ 	    var isClicked = false;	
             // DEV
             var reposinfo2 = {
               method: 'GET',

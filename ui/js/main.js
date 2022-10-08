@@ -935,7 +935,7 @@ $http(aztest1).then(function(response2) {
             }
            // document.getElementById(tabName).style.display = "block";
 	   
-	   var tablinks = document.getElementsByClassName("tablinks");
+	   var tablinks = document.getElementsByClassName("t1 tablinks");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
@@ -950,7 +950,7 @@ $http(aztest1).then(function(response2) {
             for (i = 0; i < x.length; i++) {
               x[i].style.display = "none";
             }
-	    var tablinks = document.getElementsByClassName("tablinks");
+	    var tablinks = document.getElementsByClassName("tablinks3");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }

@@ -890,6 +890,32 @@ $http(aztest1).then(function(response2) {
           var fDate= actualDate.substring(0, 10) + " " + actualDate.substring(11,19) ;
           return fDate
       }//function closed  
+		
+		
+		var awtest1 = {
+    method: 'GET',
+    url: "./output/webjson/testno/awsdevbvt.txt",
+   }
+$http(awtest1).then(function(response2) {
+    $scope.aw1 = response2.data;
+    var t =  $scope.aw1	
+    if(t){
+    const myArray = t.split(" ");
+    $scope.awtest1total = myArray[0];
+    $scope.awtest1fail = myArray[3];
+    $scope.awtest1skip = myArray[5];
+    $scope.awtest1pass = Number(myArray[0])-Number(myArray[3])-Number(myArray[5]);}
+    else if{
+	$scope.awtest1total = "N/A";
+    $scope.awtest1fail = "N/A";
+    $scope.awtest1skip = "N/A";
+    $scope.awtest1pass = "N/A";   
+    }
+}, );	
+		
+		
+		
+		
 
   
 	});

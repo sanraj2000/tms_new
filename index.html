@@ -9,27 +9,32 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="icon" type="image/png" href="./detailsShow/img/fav_sag_cloud.png"> <!-- google font -->
     <!-- custom css -->
-    <link rel="stylesheet" href="./ui/css/main.css">
+    <link rel="stylesheet" href="./ui/css/main.css"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> <!-- custom js -->
     <script src="./ui/js/main.js"></script>
-    <script>
-       let text = "How are you doing today?";
-       let t=  {{az1}}; 
-       const myArray = text.split(" ");
-       const myArray1 = text.split(" "); 
-       document.getElementById("demo").innerHTML = myArray[1];
-       document.getElementById("demo1").innerHTML = myArray1[1]; 
-    </script>
+    
+     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-touch.js"></script>
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.3.js"></script>
+    
+    
+    
+  
 </head>
 
 <body ng-app="cetApp" ng-controller="cetCtrl" onload="document.getElementById('defaultOpen').click();">
     <div class="container-fluid  headerBlock col bg-info text-white">
-        <h1 class="display-5">SMART GEEK </h1>
-        <p class="lead"> Hello Nerds!!! This  Geek is for You!!!! </p>
+        <h1 class="display-5">SMART GEEK {{test1total}}</h1>
+        <p class="lead">{{test1skip}} Hello Nerds!!!{{aw}}123This  Geek is for You!!!!{{test1pass}}</p>
         <p id="demo"></p>
         <p id="demo1"></p>
     </div>
+    
+  
+    
+    
+    
     <div class="tab" style="margin-left: 5%; margin-right: 5%; margin-top: 20px;"> <button class="t1 tablinks" onclick="connectorTabs(event,'DEVTENANTS')" id="defaultOpen" style="width: 8%;"> DEV </button> <button class="t1 tablinks" onclick="connectorTabs(event, 'STAGETENANTS') " style=" width: 8%;">STAGE</button> <button class="t1 tablinks" onclick="connectorTabs(event, 'INTTENANTS')" style=" width: 8%;">INT</button>  <button class="t1 tablinks" onclick="connectorTabs(event, 'TESTJOBS')">TEST JOBS</button> <button class="t1 tablinks" onclick="connectorTabs(event, 'BUILDJOBS')" >BUILD JOBS</button>  </div> <!-- DEV TENANTS          -->
     <div id="DEVTENANTS" class="container-fluid wmiotabtype tabcontent">
         <div class="container-fluid row">
@@ -415,7 +420,7 @@
                                     </tr>
                                     <tr>
                                         <th> Status</th>
-                                        <td> {{trunkcstatus}}</td>
+                                        <td> {{trunkcstatus}</td>
                                     </tr>
                                 </table>
                             </li>
@@ -517,18 +522,550 @@
     </div>
     <!----------------TEST JOBS-------------------->
     <div id="TESTJOBS" class="container-fluid wmiotabtype tabcontent">
-        <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 25%;"> <button class="t2 tablinks" onclick="connectorTabs2(event, 'AWSTEST')" style="  width: 31%;" id="defaultOpen2">AWS </button> <button class="t2 tablinks" onclick="connectorTabs2(event, 'AZURETEST')" style=" width: 31%;">AZure </button> <button class="t2 tablinks" onclick="connectorTabs2(event, 'NONFUNCTIONAL')" style=" width: 38%;">NonFunctional </button> </div>
+        <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 25%;"> <button class="t2 tablinks" onclick="connectorTabs2(event, 'AWSTEST')" style="  width: 31%;" id="defaultOpen2">AWS </button> <button class="t2 tablinks" onclick="connectorTabs2(event, 'AZURETEST')" style=" width: 31%;">AZure </button> <button class="t2 tablinks" onclick="connectorTabs2(event, 'NONFUNCTIONAL')" style=" width: 38%;">NonFunctional </button> </div>       
+       
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
         
         <div id="AWSTEST" class="  wmiotabtype2 tabcontent">
+            
 <div class="tabv" style="margin-top: 5%">
   <button class="tv tablinks" onclick="connectorTabsv(event, 'DEV')" id="defaultOpen4">DEV</button>
   <button class="tv tablinks" onclick="connectorTabsv(event, 'INT')">INT</button>
   <button class="tv tablinks" onclick="connectorTabsv(event, 'PREPROD')">PREPROUD</button>  
   <button class="tv tablinks" onclick="connectorTabsv(event, 'PROD')">PROD</button>
   <button class="tv tablinks" onclick="connectorTabsv(event, 'STAGE')">STAGE</button>
-</div>           
-<div id="DEV" class="tabcontentv">            
-            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">DEV</button> </div>
+</div>
+
+<div id="DEV" class="tabcontentv">
+     <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">DEV</button> </div>
+   <div class="row">
+  <div class="col-sm-12">
+    <div class="card bg-light">
+      <div class="card-body">
+        <h5 class="card-title">TRUNK</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-sm-6">
+                <table class="table table-striped table-hover table-bordered">
+                  <tr>
+                    <th colspan="4" class="text-center">
+                      <a
+                        href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-DEV-BVT/"
+                        target="_blank"
+                        >YAIC-AWS-DEV-BVT
+                      </a>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>Build #</th>
+                    <td>{{aw1showbuild}}</td>
+                    <th>Passed</th>
+                    <td>{{ awtest1pass }}</td>
+                  </tr>
+                  <tr>
+                    <th>Date</th>
+                    <td>{{aw1showtime | date: 'dd-MM-yyyy h:mm:ss a'}}</td>
+                    <th>Failed</th>
+                    <td>{{awtest1fail }}</td>
+                  </tr>
+                  <tr>
+                    <th>Status</th>
+                    <td>{{aw1showstatus}}</td>
+                    <th>Skipped</th>
+                    <td>{{awtest1skip}}</td>
+                  </tr>
+                  <tr>
+                    <th>Version</th>
+                    <td></td>
+                    <th>Total</th>
+                    <td>{{awtest1total}}</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col-sm-6">
+                <table class="table table-striped table-hover table-bordered">
+                  <tr>
+                    <th colspan="2" class="text-center">
+                      <a
+                        href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-DEV-BVT-PARALLEL/"
+                        target="_blank"
+                        >YAIC-AWS-DEV-BVT-PARALLEL</a
+                      >
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>Build #</th>
+                    <td>{{aw2showbuild}}</td>
+                  </tr>
+                  <tr>
+                    <th>Date</th>
+                    <td>{{aw2showtime | date: 'dd-MM-yyyy h:mm:ss a'}}</td>
+                  </tr>
+                  <tr>
+                    <th>Status</th>
+                    <td>{{aw2showstatus}}</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-sm-6">
+                <table class="table table-striped table-hover table-bordered">
+                  <tr>
+                    <th colspan="4" class="text-center">
+                      <a
+                        href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-DEV-BVT-SPLIT-RUN/"
+                        target="_blank"
+                        >YAIC-AWS-DEV-BVT-SPLIT-RUN
+                      </a>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>Build #</th>
+                    <td>{{aw3showbuild}}</td>
+                    <th>Passed</th>
+                    <td>{{ awtest3pass }}</td>
+                  </tr>
+                  <tr>
+                    <th>Date</th>
+                    <td>{{aw3showtime | date: 'dd-MM-yyyy h:mm:ss a'}}</td>
+                    <th>Failed</th>
+                    <td>{{awtest3fail }}</td>
+                  </tr>
+                  <tr>
+                    <th>Status</th>
+                    <td>{{aw3showstatus}}</td>
+                    <th>Skipped</th>
+                    <td>{{awtest3skip}}</td>
+                  </tr>
+                  <tr>
+                    <th>Version</th>
+                    <td></td>
+                    <th>Total</th>
+                    <td>{{awtest3total}}</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col-sm-6">
+                <table class="table table-striped table-hover table-bordered">
+                  <tr>
+                    <th colspan="4" class="text-center">
+                      <a
+                        href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-DEV-BVT-SPLIT-RUN_PARTIAL/"
+                        target="_blank"
+                        >YAIC-AWS-DEV-BVT-SPLIT-RUN_PARTIAL</a
+                      >
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>Build #</th>
+                    <td>{{aw4showbuild}}</td>
+                    <th>Passed</th>
+                    <td>{{ awtest4pass }}</td>
+                  </tr>
+                  <tr>
+                    <th>Date</th>
+                    <td>{{aw4showtime | date: 'dd-MM-yyyy h:mm:ss a'}}</td>
+                    <th>Failed</th>
+                    <td>{{awtest4fail }}</td>
+                  </tr>
+                  <tr>
+                    <th>Status</th>
+                    <td>{{aw4showstatus}}</td>
+                    <th>Skipped</th>
+                    <td>{{awtest4skip}}</td>
+                  </tr>
+                  <tr>
+                    <th>Version</th>
+                    <td></td>
+                    <th>Total</th>
+                    <td>{{awtest4total}}</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div id="INT" class="tabcontentv">
+     <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">INT</button> </div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card bg-light">
+      <div class="card-body">
+        <h5 class="card-title">TRUNK</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <table
+              class="table table-striped table-hover table-bordered"
+              style="margin-left: 5%;  width: 90%;"
+            >
+              <tr>
+                <th colspan="4" class="text-center">
+                  <a
+                    href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-INT-BVT/"
+                    target="_blank"
+                    >YAIC-AWS-INT-BVT</a
+                  >
+                </th>
+              </tr>
+
+              <tr>
+                <th>Build #</th>
+                <td>{{aw12showbuild}}</td>
+                <th>Passed</th>
+                <td>{{ awtest12pass }}</td>
+              </tr>
+              <tr>
+                <th>Date</th>
+                <td>{{aw12showtime | date: 'dd-MM-yyyy h:mm:ss a'}}</td>
+                <th>Failed</th>
+                <td>{{awtest12fail }}</td>
+              </tr>
+              <tr>
+                <th>Status</th>
+                <td>{{aw12showstatus}}</td>
+                <th>Skipped</th>
+                <td>{{awtest12skip}}</td>
+              </tr>
+              <tr>
+                <th>Version</th>
+                <td></td>
+                <th>Total</th>
+                <td>{{awtest12total}}</td>
+              </tr>
+            </table>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card bg-light">
+      <div class="card-body">
+        <h5 class="card-title">SPRO</h5>
+        <ul class="list-group list-group-flush"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+    
+    
+    
+</div>
+<div id="PROD" class="tabcontentv">
+     <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">PREPROD</button> </div>
+     <div class="row">
+                <div class="col-sm-6">
+                    <div class="card  bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title">TRUNK</h5>
+                            <ul class="list-group list-group-flush"> 
+                                <li class="list-group-item">
+                                    <table class="table table-striped table-hover table-bordered " style="margin-left: 25%;  width: 50%;" >
+                                        <tr>
+                                            <th colspan="2" class="text-center"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-PROD-BVT/" target="_blank">YAIC-AWS-PROD-BVT</a></th>
+                                        </tr>    
+                                          
+                                        <tr>
+                                            <th> Build # </th>
+                                            <td>{{aw6showbuild}}</td>
+                                         </tr>
+                                         <tr>
+                                            <th> Date </th>
+                                            <td>{{aw6showtime | date: 'dd-MM-yyyy  h:mm:ss a'}}</td>
+                                         </tr>
+                                         <tr>
+                                            <th> Status</th>
+                                            <td> {{aw6showstatus}}</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card bg-light ">
+                        <div class="card-body">
+                            <h5 class="card-title">SPRO</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <table class="table table-striped table-hover table-bordered " style="margin-left: 25%;  width: 50%;" >
+                                        <tr>
+                                            <th colspan="2" class="text-center"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-PROD-BVT-SPRO/" target="_blank">YAIC-AWS-PROD-BVT-SPRO </a></th>
+                                        </tr>    
+                                          
+                                        <tr>
+                                            <th> Build # </th>
+                                            <td>{{aw10showbuild}}</td>
+                                         </tr>
+                                         <tr>
+                                            <th> Date </th>
+                                            <td>{{aw10showtime | date: 'dd-MM-yyyy  h:mm:ss a'}}</td>
+                                         </tr>
+                                         <tr>
+                                            <th> Status</th>
+                                            <td> {{aw10showstatus}}</td>
+                                        </tr>
+                                    </table>
+                                 </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+
+            
+<div id="STAGE" class="tabcontentv"> 
+ <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">STAGE</button> </div>
+     <div class="row">
+                <div class="col-sm-6">
+                    <div class="card  bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title">TRUNK</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                     <div class="row">
+                                     	
+                                     <table class="table table-striped table-hover table-bordered "  style="margin-left: 5%;  width: 90%;" >
+                                        <tr>
+                                            <th colspan="4" class="text-center"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-STAGE-BVT/" target="_blank">YAIC-AWS-STAGE-BVT </a></th>
+                                        </tr>    
+                                          
+                                        <tr>
+                                            <th> Build # </th>
+                                            <td>{{aw7showbuild}}</td>
+                                            <th> Passed </th>
+                                            <td> {{ awtest7pass }} </th>
+                                         </tr>
+                                         <tr>
+                                            <th> Date </th>
+                                            <td>{{aw7showtime | date: 'dd-MM-yyyy  h:mm:ss a'}}</td>
+                                             <th> Failed </th>
+                                             <td> {{awtest7fail }} </th>
+                                         </tr>
+                                         <tr>
+                                            <th> Status</th>
+                                            <td> {{aw7showstatus}}</td>
+                                             <th> Skipped </th>
+                                             <td> {{awtest7skip}} </td>
+                                        </tr>
+                                         <tr>
+                                             <th> Version </th>
+                                             <td> </td>
+                                             <th> Total </th>
+                                             <td> {{awtest1total}} </td>
+                                         </tr>   
+                                    </table>
+                                    </li>
+                                    <li class="list-group-item">
+                                     <table class="table table-striped table-hover table-bordered "  style="margin-left: 5%;  width: 90%;" >
+                                        <tr>
+                                            <th colspan="4" class="text-center"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-STAGE-BVT-SPLIT-RUN/" target="_blank">YAIC-AWS-STAGE-BVT-SPLIT-RUN </a></th>
+                                        </tr>    
+                                          
+                                        <tr>
+                                            <th> Build # </th>
+                                            <td>{{aw8showbuild}}</td>
+                                            <th> Passed </th>
+                                            <td> {{ awtest8pass }} </th>
+                                         </tr>
+                                         <tr>
+                                            <th> Date </th>
+                                            <td>{{aw8showtime | date: 'dd-MM-yyyy  h:mm:ss a'}}</td>
+                                             <th> Failed </th>
+                                             <td> {{awtest8fail }} </th>
+                                         </tr>
+                                         <tr>
+                                            <th> Status</th>
+                                            <td> {{aw8showstatus}}</td>
+                                             <th> Skipped </th>
+                                             <td> {{awtest8skip}} </td>
+                                        </tr>
+                                         <tr>
+                                             <th> Version </th>
+                                             <td> </td>
+                                             <th> Total </th>
+                                             <td> {{awtest8total}} </td>
+                                         </tr>   
+                                    </table>
+                                    
+                                </li>  
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card  bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title">SPRO</h5>
+                            <ul class="list-group list-group-flush">
+                                   <table class="table table-striped table-hover table-bordered " style="margin-left: 5%;  width: 90%;" >
+                                        <tr>
+                                            <th colspan="4" class="text-center"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-SPRO-SPLIT-RUN/" target="_blank">YAIC-AWS-SPRO-SPLIT-RUN </a></th>
+                                        </tr>    
+                                          
+                                        <tr>
+                                            <th> Build # </th>
+                                            <td>{{aw11showbuild}}</td>
+                                            <th> Passed </th>
+                                            <td> {{ awtest11pass }} </th>
+                                         </tr>
+                                         <tr>
+                                            <th> Date </th>
+                                            <td>{{aw11showtime | date: 'dd-MM-yyyy  h:mm:ss a'}}</td>
+                                             <th> Failed </th>
+                                             <td> {{awtest11fail }} </th>
+                                         </tr>
+                                         <tr>
+                                            <th> Status</th>
+                                            <td> {{aw11showstatus}}</td>
+                                             <th> Skipped </th>
+                                             <td> {{awtest11skip}} </td>
+                                        </tr>
+                                         <tr>
+                                             <th> Version </th>
+                                             <td></td>
+                                             <th> Total </th>
+                                             <td> {{awtest11total}} </td>
+                                         </tr>   
+                                    </table>                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>                        
+            </div>
+    
+    
+    
+</div>        
+            
+            
+            
+            
+
+<div id="PREPROD" class="tabcontentv">
+     <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">PRE PROD</button> </div>
+
+    <div class="row">
+    <div class="col-sm-6">
+        <div class="card  bg-light">
+            <div class="card-body">
+                <h5 class="card-title">TRUNK</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <table class="table table-striped table-hover table-bordered " style="margin-left: 5%;  width: 90%;" >
+                            <tr>
+                                <th colspan="4" class="text-center"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-PREPROD-BVT/" target="_blank">YAIC-AWS-PREPROD-BVT</a></th>
+                            </tr>    
+                              
+                            <tr>
+                                <th> Build # </th>
+                                <td>{{aw5showbuild}}</td>
+                                <th> Passed </th>
+                                <td> {{ awtest5pass }} </td>
+                             </tr>
+                             <tr>
+                                <th> Date </th>
+                                <td>{{aw5showtime | date: 'dd-MM-yyyy  h:mm:ss a'}}</td>
+                                 <th> Failed </th>
+                                 <td> {{awtest5fail }} </td>
+                             </tr>
+                             <tr>
+                                <th> Status</th>
+                                <td> {{aw5showstatus}}</td>
+                                 <th> Skipped </th>
+                                 <td> {{awtest5skip}} </td>
+                            </tr>
+                             <tr>
+                                 <th> Version </th>
+                                 <td></td>
+                                 <th> Total </th>
+                                 <td> {{awtest5total}} </td>
+                             </tr>   
+                        </table>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card bg-light ">
+            <div class="card-body">
+                <h5 class="card-title">SPRO</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <table class="table table-striped table-hover table-bordered " style="margin-left: 5%;  width: 90%;" >
+                            <tr>
+                                <th colspan="4" class="text-center"><a href="https://vmapigwjenkins:8443/view/APIGW%20Cloud/job/YAIC-AWS-PREPROD-BVT-SPRO/" target="_blank">YAIC-AWS-PREPROD-BVT-SPRO</a></th>
+                            </tr>    
+                              
+                            <tr>
+                                <th> Build # </th>
+                                <td>{{aw9showbuild}}</td>
+                                <th> Passed </th>
+                                <td> {{ awtest9pass }} </td>
+                             </tr>
+                             <tr>
+                                <th> Date </th>
+                                <td>{{aw9showtime | date: 'dd-MM-yyyy  h:mm:ss a'}}</td>
+                                 <th> Failed </th>
+                                 <td> {{awtest9fail }} </td>
+                             </tr>
+                             <tr>
+                                <th> Status</th>
+                                <td> {{aw9showstatus}}</td>
+                                 <th> Skipped </th>
+                                 <td> {{awtest9skip}} </td>
+                            </tr>
+                             <tr>
+                                 <th> Version </th>
+                                 <td></td>
+                                 <th> Total </th>
+                                 <td> {{awtest9total}} </td>
+                             </tr>   
+                        </table>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>  
+</div>            
+            
+            
+            
+            
+            
+            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;" ng-class="{'active': expand}" toggleclass>DEV</button> </div>
+            <div class="collapse-arrow" ng-show="expand">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="card  bg-light">
@@ -670,10 +1207,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
 </div>
-<div id="INT" class="tabcontentv">
-            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">INT</button> </div>
+<div class="collapse-arrow" ng-hide="expand"></div>
+            </div>
+
+            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;" ng-class="{'active1': expand1}" toggleclass1>INT</button> </div>
+            <div class="collapse-arrow" ng-show="expand1">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="card  bg-light">
@@ -726,10 +1265,11 @@
                         </div>
                     </div>
                 </div>
+                </div>
+                <div class="collapse-arrow" ng-hide="expand1"></div>
             </div>
-</div>
-<div id="PREPROD" class="tabcontentv">
-            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">PREPROD</button> </div>
+            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;"  ng-class="{'active2': expand2}" toggleclass2>PREPROD</button> </div>
+            <div class="collapse-arrow" ng-show="expand2">          
             <div class="row">
                 <div class="col-sm-6">
                     <div class="card  bg-light">
@@ -815,10 +1355,11 @@
                         </div>
                     </div>
                 </div>
+                </div>
+                <div class="collapse-arrow" ng-hide="expand2"></div>
             </div>
-</div>
-<div id="PROD" class="tabcontentv">
-            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">PROD</button> </div>
+            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;" ng-class="{'active3': expand3}" toggleclass3>PROD</button> </div>
+            <div class="collapse-arrow" ng-show="expand3">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="card  bg-light">
@@ -878,10 +1419,11 @@
                         </div>
                     </div>
                 </div>
+                </div>
+                <div class="collapse-arrow" ng-hide="expand3"></div>
             </div>
-</div>
-<div id="STAGE" class="tabcontentv">
-            <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 200px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">STAGE</button> </div>
+            <button class="tablinks" style="background: darkturquoise; width: 100%;" ng-class="{'active4': expand4}" toggleclass4>STAGE</button>
+              <div class="collapse-arrow" ng-show="expand4">
               <div class="row">
                 <div class="col-sm-6">
                     <div class="card  bg-light">
@@ -997,9 +1539,10 @@
                             </ul>
                         </div>
                     </div>
-                </div>                        
+                </div> 
+                </div>
+                <div class="collapse-arrow" ng-hide="expand4"></div>
             </div>
-</div>
         </div>    
         <div id="AZURETEST" class="  wmiotabtype2 tabcontent">
             <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 150px;"> <button class="tablinks" style="background: darkturquoise; width: 100%;">PRE PROD</button> </div>

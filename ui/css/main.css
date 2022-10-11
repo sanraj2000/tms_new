@@ -2,10 +2,6 @@ body {
   font: 300 14px/1.2 'Public Sans', sans-serif;
 }
 
-.myClass{
-  color : red;
-}
-
 .container-fluid {
   max-width: 90%;
 }
@@ -74,7 +70,7 @@ body {
 
 /* Style the buttons inside the tab */
 .tab button {
-  background-color: inherit;
+  background-color: #8FBC8B;
   float: left;
   border: none;
   outline: groove;
@@ -86,7 +82,7 @@ body {
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: #6B8E23;
 }
 
 /* Create an active/current tablink class */
@@ -236,7 +232,7 @@ body {
 /* Style the buttons that are used to open the tab content */
 .tabv button {
   display: block;
-  background-color: #00CED1;
+  background-color: inherit;
   color: black;
   padding: 22px 16px;
   width: 100%;
@@ -266,6 +262,7 @@ body {
   border-left: none;
   height: 100%;
 }
+
 
 
 

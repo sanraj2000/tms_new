@@ -5,12 +5,15 @@ console.log("started");
 
 	var app = angular.module('cetApp', []);
 	app.controller('cetCtrl', function($scope,$http,$window, $location, $anchorScroll, $timeout,$filter) {
+		
+		
+		
+		
+		
+		
 
-		$scope.ID = 'blue';
-            $scope.changeCol = function() {
-                $scope.ID = "green";
-            };
- 	    var isClicked = false;	
+
+ 
             // DEV
             var reposinfo2 = {
               method: 'GET',
@@ -80,7 +83,8 @@ var awsstatus1 = {
     }
 }
 $http(awsstatus1).then(function(response2) {
-    $scope.aw1showstatus = response2.data;
+    var aw1 = response2.data;
+    $scope.aw1showstatus = (aw1 != null) ? aw1 : 'ON PROGRESS'	
 }, );
 var awsbuild1 = {
     method: 'GET',
@@ -115,7 +119,8 @@ var awsstatus2 = {
     }
 }
 $http(awsstatus2).then(function(response2) {
-    $scope.aw2showstatus = response2.data;
+     var aw2 = response2.data;
+     $scope.aw2showstatus =  (aw2 != null) ? aw2 : 'ON PROGRESS';
 }, );
 
 var awsbuild2 = {
@@ -126,7 +131,8 @@ var awsbuild2 = {
     }
 }
 $http(awsbuild2).then(function(response2) {
-    $scope.aw2showbuild = response2.data;
+     $scope.aw2showbuild = response2.data;
+    	
 }, );
 
 
@@ -148,7 +154,8 @@ var awsstatus3 = {
     }
 }
 $http(awsstatus3).then(function(response2) {
-    $scope.aw3showstatus = response2.data;
+   var aw12= response2.data;
+   $scope.aw3showstatus =  (aw12 != null) ? aw12 : 'ON PROGRESS'	
 }, );
 var awsbuild3 = {
     method: 'GET',
@@ -181,7 +188,8 @@ var awsstatus4 = {
     }
 }
 $http(awsstatus4).then(function(response2) {
-    $scope.aw4showstatus = response2.data;
+    var aw12 = response2.data;
+    $scope.aw4showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';	
 }, );
 var awsbuild4 = {
     method: 'GET',
@@ -214,7 +222,8 @@ var awsstatus5 = {
     }
 }
 $http(awsstatus5).then(function(response2) {
-    $scope.aw5showstatus = response2.data;
+    var aw12 = response2.data;
+    $scope.aw5showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';	
 }, );
 var awsbuild5 = {
     method: 'GET',
@@ -247,7 +256,8 @@ var awsstatus6 = {
     }
 }
 $http(awsstatus6).then(function(response2) {
-    $scope.aw6showstatus = response2.data;
+    var aw12 = response2.data;
+	$scope.aw6showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';
 }, );
 var awsbuild6 = {
     method: 'GET',
@@ -279,7 +289,8 @@ var awsstatus7 = {
     }
 }
 $http(awsstatus7).then(function(response2) {
-    $scope.aw7showstatus = response2.data;
+   var aw12= response2.data;
+	$scope.aw7showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';
 }, );
 var awsbuild7 = {
     method: 'GET',
@@ -311,7 +322,8 @@ var awsstatus8 = {
     }
 }
 $http(awsstatus8).then(function(response2) {
-    $scope.aw8showstatus = response2.data;
+    var aw12 = response2.data;
+	$scope.aw8showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';
 }, );
 var awsbuild8 = {
     method: 'GET',
@@ -343,7 +355,8 @@ var awsstatus9 = {
     }
 }
 $http(awsstatus9).then(function(response2) {
-    $scope.aw9showstatus = response2.data;
+   var aw12 = response2.data;
+	$scope.aw9showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';
 }, );
 var awsbuild9 = {
     method: 'GET',
@@ -374,7 +387,8 @@ var awsstatus10 = {
     }
 }
 $http(awsstatus10).then(function(response2) {
-    $scope.aw10showstatus = response2.data;
+    var aw12 = response2.data;
+	$scope.aw10showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';
 }, );
 var awsbuild10 = {
     method: 'GET',
@@ -406,7 +420,8 @@ var awsstatus11 = {
     }
 }
 $http(awsstatus11).then(function(response2) {
-    $scope.aw11showstatus = response2.data;
+    var aw12 = response2.data;
+	$scope.aw11showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';
 }, );
 var awsbuild11 = {
     method: 'GET',
@@ -433,12 +448,14 @@ $http(awstimedate12).then(function(response2) {
 var awsstatus12 = {
     method: 'GET',
     url: "./output/status/awsintbvt.json",
+    //url: "./output/status/awsprodbvt.json",	
     headers: {
         "Content-Type": "application/json"
     }
 }
 $http(awsstatus12).then(function(response2) {
-    $scope.aw12showstatus = response2.data;
+    var aw12 = response2.data;
+    $scope.aw12showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';	
 }, );
 var awsbuild12 = {
     method: 'GET',
@@ -471,7 +488,8 @@ var azstatus1 = {
     }
 }
 $http(azstatus1).then(function(response2) {
-    $scope.az1showstatus = response2.data;
+   var az1 = response2.data;
+	$scope.az1showstatus = (az1.trim().length !== 0) ? az1 : 'ON PROGRESS';
 }, );
 var azbuild1 = {
     method: 'GET',
@@ -503,7 +521,8 @@ var azstatus2 = {
     }
 }
 $http(azstatus2).then(function(response2) {
-    $scope.az2showstatus = response2.data;
+    var az2 = response2.data;
+	$scope.az2showstatus = (az2.trim().length !== 0) ? az2 : 'ON PROGRESS';
 }, );
 var azbuild2 = {
     method: 'GET',
@@ -535,7 +554,8 @@ var azstatus3 = {
     }
 }
 $http(azstatus3).then(function(response2) {
-    $scope.az3showstatus = response2.data;
+    var az1 = response2.data;
+	$scope.az3showstatus = (az1.trim().length !== 0) ? az1 : 'ON PROGRESS';
 }, );
 var azbuild3 = {
     method: 'GET',
@@ -566,7 +586,8 @@ var azstatus4 = {
     }
 }
 $http(azstatus4).then(function(response2) {
-    $scope.az4showstatus = response2.data;
+   var az1 = response2.data;
+	$scope.az4showstatus = (az1.trim().length !== 0) ? az1 : 'ON PROGRESS';
 }, );
 var azbuild4 = {
     method: 'GET',
@@ -598,7 +619,8 @@ var azstatus5 = {
     }
 }
 $http(azstatus5).then(function(response2) {
-    $scope.az5showstatus = response2.data;
+    var az1= response2.data;
+	$scope.az5showstatus = (az1.trim().length !== 0) ? az1 : 'ON PROGRESS';
 }, );
 var azbuild5 = {
     method: 'GET',
@@ -630,7 +652,8 @@ var azstatus6 = {
     }
 }
 $http(azstatus6).then(function(response2) {
-    $scope.az6showstatus = response2.data;
+    var az1 = response2.data;
+	$scope.az6showstatus = (az1.trim().length !== 0) ? az1 : 'ON PROGRESS';
 }, );
 var azbuild6 = {
     method: 'GET',
@@ -663,7 +686,9 @@ var otherstatus1 = {
     }
 }
 $http(otherstatus1).then(function(response2) {
-    $scope.other1showstatus = response2.data;
+    var o1 = response2.data; 
+    $scope.other1showstatus = (o1 != null) ? o1 : 'ON PROGRESS';
+	 
 }, );
 var otherbuild1 = {
     method: 'GET',
@@ -696,7 +721,8 @@ var otherstatus2 = {
     }
 }
 $http(otherstatus2).then(function(response2) {
-    $scope.other2showstatus = response2.data;
+    var o1 = response2.data;
+	$scope.other2showstatus = (o1 != null) ? o1 : 'ON PROGRESS';
 }, );
 var otherbuild2 = {
     method: 'GET',
@@ -729,7 +755,8 @@ var otherstatus3 = {
     }
 }
 $http(otherstatus3).then(function(response2) {
-    $scope.other3showstatus = response2.data;
+    var o1 = response2.data;
+	$scope.other3showstatus = (o1 != null) ? o1 : 'ON PROGRESS';
 }, );
 var otherbuild3 = {
     method: 'GET',
@@ -761,7 +788,8 @@ var otherstatus4 = {
     }
 }
 $http(otherstatus4).then(function(response2) {
-    $scope.other4showstatus = response2.data;
+   var o1 = response2.data;
+	$scope.other4showstatus = (o1 != null) ? o1 : 'ON PROGRESS';
 }, );
 var otherbuild4 = {
     method: 'GET',
@@ -773,24 +801,672 @@ var otherbuild4 = {
 $http(otherbuild4).then(function(response2) {
     $scope.other4showbuild = response2.data;
 }, );			
-//////////////////////////////////////////////////////////////////		
+//////////////////////////////////fix 10.1////////////////////////////////				
+var fix101 = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/date/101.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix101).then(function(response2) {
+    $scope.fix101date = new Date(response2.data);
+}, );
+var fix101s = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/status/101.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix101s).then(function(response2) {
+    var fix1 = response2.data;
+    $scope.fix101status = (fix1 != null) ? fix1 : 'ON PROGRESS';	
+  
+}, );
+var fix101b = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/buildno/101.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix101b).then(function(response2) {
+    $scope.fix101build = response2.data;
+}, );	
+		
+///////////////////////////////////fix10.5//////////////////////
+		
+var fix105 = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/date/105.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix105).then(function(response2) {
+    $scope.fix105date = new Date(response2.data);
+}, );
+var fix105s = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/status/105.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix105s).then(function(response2) {
+    var fix1s = response2.data;
+	$scope.fix105status = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+}, );
+var fix105b = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/buildno/105.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix105b).then(function(response2) {
+    $scope.fix105build = response2.data;
+}, );
+//////////////////////////////// fix 10.7/////////////////////////
+		
+var fix107 = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/date/107.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix107).then(function(response2) {
+    $scope.fix107date = new Date(response2.data);
+}, );
+var fix107s = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/status/107.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix107s).then(function(response2) {
+   var fix1 = response2.data;
+	 $scope.fix107status = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+}, );
+var fix107b = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/buildno/107.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix107b).then(function(response2) {
+    $scope.fix107build = response2.data;
+}, );		
+		
+		
+		
+////////////////////////////////////////////////fix 10.11/////////////////////////
+var fix1011 = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/date/1011.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix1011).then(function(response2) {
+    $scope.fix1011date = new Date(response2.data);
+}, );
+var fix1011s = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/status/1011.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix1011s).then(function(response2) {
+     var fix1 = response2.data;
+	$scope.fix1011status = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+}, );
+var fix1011b = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/buildno/1011.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix1011b).then(function(response2) {
+    $scope.fix1011build = response2.data;
+}, );		
 
 		
 		
+var bfix1011 = {
+    method: 'GET',
+    url: "./output/buildjobs/basbuild/date/1011.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(bfix1011).then(function(response2) {
+    $scope.bfix1011date = new Date(response2.data);
+}, );
+var bfix1011s = {
+    method: 'GET',
+    url: "./output/buildjobs/basbuild/status/1011.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(bfix1011s).then(function(response2) {
+     var fix1= response2.data;
+	 $scope.bfix1011status = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+}, );
+var bfix1011b = {
+    method: 'GET',
+    url: "./output/buildjobs/basbuild/buildno/1011.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(bfix1011b).then(function(response2) {
+    $scope.bfix1011build = response2.data;
+}, );		
+//////////////////////////////////////////fix 10.12////////////////////////////////////
+		
+var fix1012 = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/date/1012.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix1012).then(function(response2) {
+    $scope.fix1012date = new Date(response2.data);
+}, );
+var fix1012s = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/status/1012.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix1012s).then(function(response2) {
+    var fix1= response2.data;
+	 $scope.fix1012status = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+}, );
+var fix1012b = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/buildno/1012.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix1012b).then(function(response2) {
+    $scope.fix1012build = response2.data;
+}, );		
 
+		
+var bfix1012 = {
+    method: 'GET',
+    url: "./output/buildjobs/basbuild/date/1012.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(bfix1012).then(function(response2) {
+    $scope.bfix1012date = new Date(response2.data);
+}, );
+var bfix1012s = {
+    method: 'GET',
+    url: "./output/buildjobs/basbuild/status/1012.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(bfix1012s).then(function(response2) {
+    var fix1 = response2.data;
+	$scope.bfix1012status = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+}, );
+var bfix1012b = {
+    method: 'GET',
+    url: "./output/buildjobs/basbuild/buildno/1012.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(bfix1012b).then(function(response2) {
+    $scope.bfix1012build = response2.data;
+}, );		
+///////////////////////////////////////fix 10.15//////////////////////////////
+		
+var fix1015 = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/date/1015.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix1015).then(function(response2) {
+    $scope.fix1015date = new Date(response2.data);
+}, );
+var fix1015s = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/status/1015.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix1015s).then(function(response2) {
+     var fix1= response2.data;
+	$scope.fix1015status = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+}, );
+var fix1015b = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/buildno/1015.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(fix1015b).then(function(response2) {
+    $scope.fix1015build = response2.data;
+}, );		
+
+		
+var bfix1015 = {
+    method: 'GET',
+    url: "./output/buildjobs/basbuild/date/1015.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(bfix1015).then(function(response2) {
+    $scope.bfix1015date = new Date(response2.data);
+}, );
+var bfix1015s = {
+    method: 'GET',
+    url: "./output/buildjobs/basbuild/status/1015.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(bfix1015s).then(function(response2) {
+    var fix1 = response2.data;
+	$scope.bfix1015status = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+}, );
+var bfix1015b = {
+    method: 'GET',
+    url: "./output/buildjobs/basbuild/buildno/1015.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(bfix1015b).then(function(response2) {
+    $scope.bfix1015build = response2.data;
+}, );		
+//////////////////////////////////////////trunk//////////////////////////
+		
+var trunk = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/date/trunk.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(trunk).then(function(response2) {
+    $scope.trunkdate = new Date(response2.data);
+}, );
+var trunks = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/status/trunk.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(trunks).then(function(response2) {
+    var fix1 = response2.data;
+	$scope.trunkstatus=(fix1 != null) ? fix1 : 'ON PROGRESS'	
+}, );
+var trunkb = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/buildno/trunk.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(trunkb).then(function(response2) {
+    $scope.trunkbuild = response2.data;
+}, );
+		
+		
+var trunkc = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/date/trunkc.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(trunkc).then(function(response2) {
+    $scope.trunkcdate = new Date(response2.data);
+}, );
+var trunkcs = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/status/trunkc.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(trunkcs).then(function(response2) {
+   var fix1 = response2.data;
+    $scope.trunkcstatus = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+  
+}, );
+var trunkcb = {
+    method: 'GET',
+    url: "./output/buildjobs/fixbuild/buildno/trunkc.json",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}
+$http(trunkcb).then(function(response2) {
+    $scope.trunkcbuild = response2.data;
+}, );		
+		
+		
+		
+		
+		
+/////////////////////////////AWS TEST JOBS///////////////////////////////////////
+var awtest1 = {
+    method: 'GET',
+    url: "./output/webjson/testno/awsdevbvt.txt",
+   }
+$http(awtest1).then(function(response2) {
+    $scope.aw1 = response2.data;
+    var t =  $scope.aw1	
+     if(t.trim().length !== 0){
+    const myArray = t.split(" ");
+    $scope.awtest1total = myArray[0];
+    $scope.awtest1fail = myArray[3];
+    $scope.awtest1skip = myArray[5];
+    $scope.awtest1pass = Number(myArray[0])-Number(myArray[3])-Number(myArray[5]);}
+	else{
+		$scope.awtest1total = "N/A";
+    $scope.awtest1fail = "N/A";
+    $scope.awtest1skip = "N/A";
+    $scope.awtest1pass = "N/A";
+	}
+}, );			
+	
+var awtest3 = {
+    method: 'GET',
+    url: "./output/webjson/testno/awsdevbvtsplitrun.txt",
+   }
+$http(awtest3).then(function(response2) {
+    $scope.aw3 = response2.data;
+    var t =  $scope.aw3	
+     if(t.trim().length !== 0){
+    const myArray = t.split(/\r?\n/);
+    $scope.awtest3pass = myArray[2];
+    $scope.awtest3fail = myArray[1];
+    $scope.awtest3skip = myArray[3];
+    $scope.awtest3total = Number(myArray[1])+Number(myArray[2])+Number(myArray[3])+Number(myArray[4]);	}
+		    else{
+		$scope.awtest3total = "N/A";
+    $scope.awtest3fail = "N/A";
+    $scope.awtest3skip = "N/A";
+    $scope.awtest3pass = "N/A";
+	}
+}, );		
+		
+	
+var awtest4 = {
+    method: 'GET',
+    url: "./output/webjson/testno/awsdevbvtsplitrunpartial.txt",
+   }
+$http(awtest4).then(function(response2) {
+    $scope.aw4 = response2.data;
+    var t =  $scope.aw4	
+     if(t.trim().length !== 0){
+    const myArray = t.split(/\r?\n/);
+    $scope.awtest4pass = myArray[2];
+    $scope.awtest4fail = myArray[1];
+    $scope.awtest4skip = myArray[3];
+    $scope.awtest4total = Number(myArray[1])+Number(myArray[2])+Number(myArray[3])+Number(myArray[4]);}
+	else{
+		$scope.awtest4total = "N/A";
+    $scope.awtest4fail = "N/A";
+    $scope.awtest4skip = "N/A";
+    $scope.awtest4pass = "N/A";
+	}
+	
+}, );	
+
+		
+var awtest5 = {
+    method: 'GET',
+    url: "./output/webjson/testno/awspreprodbvt.txt",
+   }
+$http(awtest5).then(function(response2) {
+    $scope.aw5 = response2.data;
+    var t =  $scope.aw5	
+     if(t.trim().length !== 0){
+    const myArray = t.split(" ");
+    $scope.awtest5total = myArray[0];
+    $scope.awtest5fail = myArray[3];
+    $scope.awtest5skip = myArray[5];
+    $scope.awtest5pass = Number(myArray[0])-Number(myArray[3])-Number(myArray[5]);}
+	else{
+		$scope.awtest5total = "N/A";
+    $scope.awtest5fail = "N/A";
+    $scope.awtest5skip = "N/A";
+    $scope.awtest5pass = "N/A";
+	}	
+}, );		
+		
+var awtest7 = {
+    method: 'GET',
+    url: "./output/webjson/testno/awsstagebvt.txt",
+   }
+$http(awtest7).then(function(response2) {
+    $scope.aw7 = response2.data;
+    var t =  $scope.aw7	
+     if(t.trim().length !== 0){
+    const myArray = t.split(" ");
+    $scope.awtest7total = myArray[0];
+    $scope.awtest7fail = myArray[3];
+    $scope.awtest7skip = myArray[5];
+    $scope.awtest7pass = Number(myArray[0])-Number(myArray[3])-Number(myArray[5]);}
+	else{
+		$scope.awtest7total = "N/A";
+    $scope.awtest7fail = "N/A";
+    $scope.awtest7skip = "N/A";
+    $scope.awtest7pass = "N/A";
+	}	
+}, );		
+
+	
+var awtest8 = {
+    method: 'GET',
+    url: "./output/webjson/testno/awsstagebvtsplitrun.txt",
+   }
+$http(awtest8).then(function(response2) {
+    $scope.aw8 = response2.data;
+    var t =  $scope.aw8	
+     if(t.trim().length !== 0){
+    const myArray = t.split(/\r?\n/);
+    $scope.awtest8pass = myArray[2];
+    $scope.awtest8fail = myArray[1];
+    $scope.awtest8skip = myArray[3];
+    $scope.awtest8total = Number(myArray[1])+Number(myArray[2])+Number(myArray[3])+Number(myArray[4]);}
+	else{
+		$scope.awtest8total = "N/A";
+    $scope.awtest8fail = "N/A";
+    $scope.awtest8skip = "N/A";
+    $scope.awtest8pass = "N/A";
+	}	
+}, );
+		
+var awtest9 = {
+    method: 'GET',
+    url: "./output/webjson/testno/awspreprodbvtspro.txt",
+   }
+$http(awtest9).then(function(response2) {
+    $scope.aw9 = response2.data;
+    var t =  $scope.aw9	 
+    if(t.trim().length !== 0){
+    const myArray = t.split(" ");
+    $scope.awtest9total = myArray[0];
+    $scope.awtest9fail = myArray[3];
+    $scope.awtest9skip = myArray[5];
+    $scope.awtest9pass = Number(myArray[0])-Number(myArray[3])-Number(myArray[5]);}
+	else{
+		$scope.awtest9total = "N/A";
+    $scope.awtest9fail = "N/A";
+    $scope.awtest9skip = "N/A";
+    $scope.awtest9pass = "N/A";
+	}	
+}, );		
+		
+	
+var awtest11 = {
+    method: 'GET',
+    url: "./output/webjson/testno/awssprosplitrun.txt",
+   }
+$http(awtest11).then(function(response2) {
+    $scope.aw11 = response2.data;
+    var t =  $scope.aw11
+     if(t.trim().length !== 0){
+    const myArray = t.split(/\r?\n/);
+    $scope.awtest11pass = myArray[2];
+    $scope.awtest11fail = myArray[1];
+    $scope.awtest11skip = myArray[3];
+    $scope.awtest11total = Number(myArray[1])+Number(myArray[2])+Number(myArray[3])+Number(myArray[4]);	}
+	else{
+		$scope.awtest11total = "N/A";
+    $scope.awtest11fail = "N/A";
+    $scope.awtest11skip = "N/A";
+    $scope.awtest11pass = "N/A";
+	}
+}, );			
+			
+var awtest12 = {
+    method: 'GET',
+    url: "./output/webjson/testno/awsintbvt.txt",
+   }
+$http(awtest12).then(function(response2) {
+    $scope.aw12 = response2.data;
+    var t =  $scope.aw12
+    if(t.trim().length !== 0){
+    const myArray = t.split(" ");
+    $scope.awtest12total = myArray[0];
+    $scope.awtest12fail = myArray[3];
+    $scope.awtest12skip = myArray[5];
+    $scope.awtest12pass = Number(myArray[0])-Number(myArray[3])-Number(myArray[5]);}
+	else{
+		$scope.awtest12total = "N/A";
+    $scope.awtest12fail = "N/A";
+    $scope.awtest12skip = "N/A";
+    $scope.awtest12pass = "N/A";
+	}
+}, );		
+////////////////////////////////////////////AZURE JOBS////////////////////		
+		
+		
+		
+		
 var aztest1 = {
     method: 'GET',
-    url: "./output/webjson/testno/azureprodbvt.txt",
+    url: "./output/webjson/testno/azurepreprodbvt.txt",
    }
 $http(aztest1).then(function(response2) {
     $scope.az1 = response2.data;
     var t =  $scope.az1	
+     if(t.trim().length !== 0){
     const myArray = t.split(" ");
-    $scope.test = myArray[1];	
-    $scope.sum = Number(myArray[0])+Number(myArray[3]);	
-}, );		
+    
+    $scope.aztest1total = myArray[0];
+    $scope.aztest1fail = myArray[3];
+    $scope.aztest1skip = myArray[5];
+    $scope.aztest1pass = Number(myArray[0])-Number(myArray[3])-Number(myArray[5]);}
+	else{
+		$scope.aztest1total = "N/A";
+    $scope.aztest1fail = "N/A";
+    $scope.aztest1skip = "N/A";
+    $scope.aztest1pass = "N/A";
+	}
+	
+    
+}, );
+		
+var aztest2 = {
+    method: 'GET',
+    url: "./output/webjson/testno/azurepreprodbvtspro.txt",
+   }
+$http(aztest2).then(function(response2) {
+    $scope.az2 = response2.data;
+    var t =  $scope.az2	
+     if(t.trim().length !== 0){
+    const myArray = t.split(" ");
+    $scope.aztest2total = myArray[0];
+    $scope.aztest2fail = myArray[3];
+    $scope.aztest2skip = myArray[5];
+    $scope.aztest2pass = Number(myArray[0])-Number(myArray[3])-Number(myArray[5]);}
+	else{
+		$scope.aztest2total = "N/A";
+    $scope.aztest2fail = "N/A";
+    $scope.aztest2skip = "N/A";
+    $scope.aztest2pass = "N/A";
+	}
+    
+}, );
+		
+var aztest4 = {
+    method: 'GET',
+    url: "./output/webjson/testno/azurestagebvt.txt",
+   }
+$http(aztest1).then(function(response2) {
+    $scope.az4 = response2.data;
+    var t =  $scope.az4	
+     if(t.trim().length !== 0){
+    const myArray = t.split(" ");
+    $scope.aztest4total = myArray[0];
+    $scope.aztest4fail = myArray[3];
+    $scope.aztest4skip = myArray[5];
+    $scope.aztest4pass = Number(myArray[0])-Number(myArray[3])-Number(myArray[5]);}
+	else{
+		$scope.aztest4total = "N/A";
+    $scope.aztest4fail = "N/A";
+    $scope.aztest4skip = "N/A";
+    $scope.aztest4pass = "N/A";
+	}
+    
+}, );
+		
+	
+var aztest5 = {
+    method: 'GET',
+    url: "./output/webjson/testno/azuresprosplitrun.txt",
+   }
+$http(aztest5).then(function(response2) {
+    $scope.az5 = response2.data;
+    var t =  $scope.az5
+     if(t.trim().length !== 0){
+    const myArray = t.split(/\r?\n/);
+    $scope.aztest5pass = myArray[2];
+    $scope.aztest5fail = myArray[1];
+    $scope.aztest5skip = myArray[3];
+    $scope.aztest5total = Number(myArray[1])+Number(myArray[2])+Number(myArray[3])+Number(myArray[4]);}
+	else{
+		$scope.aztest5total = "N/A";
+    $scope.aztest5fail = "N/A";
+    $scope.aztest5skip = "N/A";
+    $scope.aztest5pass = "N/A";
+	}	
+}, );			
 		
 		
+		
+		
+////////////////////////////////////////////////////////////////		
 		
 		
 		
@@ -890,32 +1566,6 @@ $http(aztest1).then(function(response2) {
           var fDate= actualDate.substring(0, 10) + " " + actualDate.substring(11,19) ;
           return fDate
       }//function closed  
-		
-		
-		var awtest1 = {
-    method: 'GET',
-    url: "./output/webjson/testno/awsdevbvt.txt",
-   }
-$http(awtest1).then(function(response2) {
-    $scope.aw1 = response2.data;
-    var t =  $scope.aw1	
-    if(t){
-    const myArray = t.split(" ");
-    $scope.awtest1total = myArray[0];
-    $scope.awtest1fail = myArray[3];
-    $scope.awtest1skip = myArray[5];
-    $scope.awtest1pass = Number(myArray[0])-Number(myArray[3])-Number(myArray[5]);}
-    else if{
-	$scope.awtest1total = "N/A";
-    $scope.awtest1fail = "N/A";
-    $scope.awtest1skip = "N/A";
-    $scope.awtest1pass = "N/A";   
-    }
-}, );	
-		
-		
-		
-		
 
   
 	});
@@ -934,21 +1584,28 @@ $http(awtest1).then(function(response2) {
 
 
     //tabs
-          function connectorTabs(tabName) {
+          function connectorTabs(evt,tabName) {
             var i;
             var x = document.getElementsByClassName("wmiotabtype");
             for (i = 0; i < x.length; i++) {
               x[i].style.display = "none";
             }
+           // document.getElementById(tabName).style.display = "block";
+	   var tablinks = document.getElementsByClassName("t1 tablinks");
+  	   for (i = 0; i < tablinks.length; i++) {
+   		 tablinks[i].className = tablinks[i].className.replace(" active", "");
+ 	    }
             document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";	  
 
             if(tabName === "TESTJOBS"){
               document.getElementById('defaultOpen2').click();
             }
-		  
-	    if(tabName === "BUILDJOBS"){
+		 
+	     if(tabName === "BUILDJOBS"){
               document.getElementById('defaultOpen3').click();
             }  
+		   
           }
           //// Get the element with id="defaultOpen" and click on it
           //  document.getElementById("defaultOpen").Click();
@@ -960,13 +1617,14 @@ $http(awtest1).then(function(response2) {
               x[i].style.display = "none";
             }
            // document.getElementById(tabName).style.display = "block";
-	   
-	   var tablinks = document.getElementsByClassName("t1 tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
+	   var tablinks = document.getElementsByClassName("t2 tablinks");
+  	   for (i = 0; i < tablinks.length; i++) {
+   		 tablinks[i].className = tablinks[i].className.replace(" active", "");
+ 	    }
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
+		  if(tabName === "AWSTEST"){
+		document.getElementById("defaultOpen4").click();	   }
            
           }
 	
@@ -976,14 +1634,15 @@ $http(awtest1).then(function(response2) {
             for (i = 0; i < x.length; i++) {
               x[i].style.display = "none";
             }
-	    var tablinks = document.getElementsByClassName("tablinks3");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
+         //   document.getElementById(tabName).style.display = "block";
+	   var tablinks = document.getElementsByClassName("t3 tablinks");
+  	   for (i = 0; i < tablinks.length; i++) {
+   		 tablinks[i].className = tablinks[i].className.replace(" active", "");
+ 	    }
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
+           
           }
-
 
 
 
@@ -1001,3 +1660,8 @@ function connectorTabsv(evt, tabName) {
   evt.currentTarget.className += " active";
 }
 
+
+	
+
+
+		

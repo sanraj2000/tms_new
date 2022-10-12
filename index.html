@@ -35,30 +35,37 @@
         <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars text-white"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);" ><i class="fas fa-tachometer-alt"></i>Dashboard</div>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Address Book</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);" onclick="connectorTabs(event,'DEVTENANTS')" id="defaultOpen"><i class="far fa-clone"></i>Components</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);" onclick="connectorTabs(event,'INTTENANTS')" ><i class="far fa-calendar-alt"></i>Calendar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-chart-bar"></i>Charts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-copy"></i>Documents</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+       <div class="dlt-tab-bar">
+    <ul role="tablist" class="dlt-tab-nav">
+        <li role="presentation">
+            <a tabindex="0" id="tab-link-1" data-target=".tab-1" class="dlt-tab-link dlt-tab-link-selected" href="javascript:void(0)" role="tab" aria-selected="true">Tab label 1</a>
+        </li>
+        <li role="presentation">
+            <a tabindex="0" id="tab-link-2" data-target=".tab-2" class="dlt-tab-link" href="javascript:void(0)" role="tab">Tab
+                  label 2</a>
+        </li>
+        <li role="presentation">
+            <a tabindex="0" id="tab-link-3" data-target=".tab-3" class="dlt-tab-link" href="javascript:void(0)" role="tab">Tab
+                  label 3</a>
+        </li>
+        <li role="presentation">
+            <a tabindex="0" id="tab-link-4" data-target=".tab-4" class="dlt-tab-link dlt-tab-link-disabled" href="javascript:void(0)" role="tab" aria-disabled="true">Tab
+                  label 4</a>
+        </li>
+    </ul>
+    <div class="dlt-tab-panel dlt-tab-panel-open tab-1" role="tabpanel" aria-labelledby="tab-link-1" aria-hidden="false">
+        <p>Content for first tab goes here.</p>
+    </div>
+    <div class="dlt-tab-panel tab-2" role="tabpanel" aria-labelledby="tab-link-2" aria-hidden="true">
+        <p>Content for second tab goes here.</p>
+    </div>
+    <div class="dlt-tab-panel tab-3" role="tabpanel" aria-labelledby="tab-link-3" aria-hidden="true">
+        <p>Content for third tab goes here.</p>
+    </div>
+    <div class="dlt-tab-panel tab-4" role="tabpanel" aria-labelledby="tab-link-4" aria-hidden="true">
+        <p>Content for fourth tab goes here.</p>
+    </div>
+</div>
   
     
     

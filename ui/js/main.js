@@ -84,7 +84,7 @@ var awsstatus1 = {
 }
 $http(awsstatus1).then(function(response2) {
     var aw1 = response2.data;
-    $scope.aw1showstatus = (aw1 != null) ? aw1 : 'ON PROGRESS'	
+    $scope.aw1showstatus = (aw1 != null) ? aw1 : 'IN PROGRESS'	
 }, );
 var awsbuild1 = {
     method: 'GET',
@@ -120,7 +120,7 @@ var awsstatus2 = {
 }
 $http(awsstatus2).then(function(response2) {
      var aw2 = response2.data;
-     $scope.aw2showstatus =  (aw2 != null) ? aw2 : 'ON PROGRESS';
+     $scope.aw2showstatus =  (aw2 != null) ? aw2 : 'IN PROGRESS';
 }, );
 
 var awsbuild2 = {
@@ -155,7 +155,7 @@ var awsstatus3 = {
 }
 $http(awsstatus3).then(function(response2) {
    var aw12= response2.data;
-   $scope.aw3showstatus =  (aw12 != null) ? aw12 : 'ON PROGRESS'	
+   $scope.aw3showstatus =  (aw12 != null) ? aw12 : 'IN PROGRESS'	
 }, );
 var awsbuild3 = {
     method: 'GET',
@@ -189,7 +189,7 @@ var awsstatus4 = {
 }
 $http(awsstatus4).then(function(response2) {
     var aw12 = response2.data;
-    $scope.aw4showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';	
+    $scope.aw4showstatus = (aw12 != null) ? aw12 : 'IN PROGRESS';	
 }, );
 var awsbuild4 = {
     method: 'GET',
@@ -223,7 +223,7 @@ var awsstatus5 = {
 }
 $http(awsstatus5).then(function(response2) {
     var aw12 = response2.data;
-    $scope.aw5showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';	
+    $scope.aw5showstatus = (aw12 != null) ? aw12 : 'IN PROGRESS';	
 }, );
 var awsbuild5 = {
     method: 'GET',
@@ -257,7 +257,7 @@ var awsstatus6 = {
 }
 $http(awsstatus6).then(function(response2) {
     var aw12 = response2.data;
-	$scope.aw6showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';
+	$scope.aw6showstatus = (aw12 != null) ? aw12 : 'IN PROGRESS';
 }, );
 var awsbuild6 = {
     method: 'GET',
@@ -290,7 +290,7 @@ var awsstatus7 = {
 }
 $http(awsstatus7).then(function(response2) {
    var aw12= response2.data;
-	$scope.aw7showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';
+	$scope.aw7showstatus = (aw12 != null) ? aw12 : 'IN PROGRESS';
 }, );
 var awsbuild7 = {
     method: 'GET',
@@ -323,7 +323,7 @@ var awsstatus8 = {
 }
 $http(awsstatus8).then(function(response2) {
     var aw12 = response2.data;
-	$scope.aw8showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';
+	$scope.aw8showstatus = (aw12 != null) ? aw12 : 'IN PROGRESS';
 }, );
 var awsbuild8 = {
     method: 'GET',
@@ -356,7 +356,7 @@ var awsstatus9 = {
 }
 $http(awsstatus9).then(function(response2) {
    var aw12 = response2.data;
-	$scope.aw9showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';
+	$scope.aw9showstatus = (aw12 != null) ? aw12 : 'IN PROGRESS';
 }, );
 var awsbuild9 = {
     method: 'GET',
@@ -388,7 +388,7 @@ var awsstatus10 = {
 }
 $http(awsstatus10).then(function(response2) {
     var aw12 = response2.data;
-	$scope.aw10showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';
+	$scope.aw10showstatus = (aw12 != null) ? aw12 : 'IN PROGRESS';
 }, );
 var awsbuild10 = {
     method: 'GET',
@@ -421,7 +421,7 @@ var awsstatus11 = {
 }
 $http(awsstatus11).then(function(response2) {
     var aw12 = response2.data;
-	$scope.aw11showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';
+	$scope.aw11showstatus = (aw12 != null) ? aw12 : 'IN PROGRESS';
 }, );
 var awsbuild11 = {
     method: 'GET',
@@ -455,7 +455,7 @@ var awsstatus12 = {
 }
 $http(awsstatus12).then(function(response2) {
     var aw12 = response2.data;
-    $scope.aw12showstatus = (aw12 != null) ? aw12 : 'ON PROGRESS';	
+    $scope.aw12showstatus = (aw12 != null) ? aw12 : 'IN PROGRESS';	
 }, );
 var awsbuild12 = {
     method: 'GET',
@@ -489,7 +489,7 @@ var azstatus1 = {
 }
 $http(azstatus1).then(function(response2) {
    var az1 = response2.data;
-	$scope.az1showstatus = (az1.trim().length !== 0) ? az1 : 'ON PROGRESS';
+	$scope.az1showstatus = (az1.trim().length !== 0) ? az1 : 'IN PROGRESS';
 }, );
 var azbuild1 = {
     method: 'GET',
@@ -522,7 +522,7 @@ var azstatus2 = {
 }
 $http(azstatus2).then(function(response2) {
     var az2 = response2.data;
-	$scope.az2showstatus = (az2.trim().length !== 0) ? az2 : 'ON PROGRESS';
+	$scope.az2showstatus = (az2.trim().length !== 0) ? az2 : 'IN PROGRESS';
 }, );
 var azbuild2 = {
     method: 'GET',
@@ -555,7 +555,7 @@ var azstatus3 = {
 }
 $http(azstatus3).then(function(response2) {
     var az1 = response2.data;
-	$scope.az3showstatus = (az1.trim().length !== 0) ? az1 : 'ON PROGRESS';
+	$scope.az3showstatus = (az1.trim().length !== 0) ? az1 : 'IN PROGRESS';
 }, );
 var azbuild3 = {
     method: 'GET',
@@ -587,7 +587,7 @@ var azstatus4 = {
 }
 $http(azstatus4).then(function(response2) {
    var az1 = response2.data;
-	$scope.az4showstatus = (az1.trim().length !== 0) ? az1 : 'ON PROGRESS';
+	$scope.az4showstatus = (az1.trim().length !== 0) ? az1 : 'IN PROGRESS';
 }, );
 var azbuild4 = {
     method: 'GET',
@@ -620,7 +620,7 @@ var azstatus5 = {
 }
 $http(azstatus5).then(function(response2) {
     var az1= response2.data;
-	$scope.az5showstatus = (az1.trim().length !== 0) ? az1 : 'ON PROGRESS';
+	$scope.az5showstatus = (az1.trim().length !== 0) ? az1 : 'IN PROGRESS';
 }, );
 var azbuild5 = {
     method: 'GET',
@@ -653,7 +653,7 @@ var azstatus6 = {
 }
 $http(azstatus6).then(function(response2) {
     var az1 = response2.data;
-	$scope.az6showstatus = (az1.trim().length !== 0) ? az1 : 'ON PROGRESS';
+	$scope.az6showstatus = (az1.trim().length !== 0) ? az1 : 'IN PROGRESS';
 }, );
 var azbuild6 = {
     method: 'GET',
@@ -687,7 +687,7 @@ var otherstatus1 = {
 }
 $http(otherstatus1).then(function(response2) {
     var o1 = response2.data; 
-    $scope.other1showstatus = (o1 != null) ? o1 : 'ON PROGRESS';
+    $scope.other1showstatus = (o1 != null) ? o1 : 'IN PROGRESS';
 	 
 }, );
 var otherbuild1 = {
@@ -722,7 +722,7 @@ var otherstatus2 = {
 }
 $http(otherstatus2).then(function(response2) {
     var o1 = response2.data;
-	$scope.other2showstatus = (o1 != null) ? o1 : 'ON PROGRESS';
+	$scope.other2showstatus = (o1 != null) ? o1 : 'IN PROGRESS';
 }, );
 var otherbuild2 = {
     method: 'GET',
@@ -756,7 +756,7 @@ var otherstatus3 = {
 }
 $http(otherstatus3).then(function(response2) {
     var o1 = response2.data;
-	$scope.other3showstatus = (o1 != null) ? o1 : 'ON PROGRESS';
+	$scope.other3showstatus = (o1 != null) ? o1 : 'IN PROGRESS';
 }, );
 var otherbuild3 = {
     method: 'GET',
@@ -789,7 +789,7 @@ var otherstatus4 = {
 }
 $http(otherstatus4).then(function(response2) {
    var o1 = response2.data;
-	$scope.other4showstatus = (o1 != null) ? o1 : 'ON PROGRESS';
+	$scope.other4showstatus = (o1 != null) ? o1 : 'IN PROGRESS';
 }, );
 var otherbuild4 = {
     method: 'GET',
@@ -821,7 +821,7 @@ var fix101s = {
 }
 $http(fix101s).then(function(response2) {
     var fix1 = response2.data;
-    $scope.fix101status = (fix1 != null) ? fix1 : 'ON PROGRESS';	
+    $scope.fix101status = (fix1 != null) ? fix1 : 'IN PROGRESS';	
   
 }, );
 var fix101b = {
@@ -856,7 +856,7 @@ var fix105s = {
 }
 $http(fix105s).then(function(response2) {
     var fix1s = response2.data;
-	$scope.fix105status = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+	$scope.fix105status = (fix1 != null) ? fix1 : 'IN PROGRESS'	
 }, );
 var fix105b = {
     method: 'GET',
@@ -889,7 +889,7 @@ var fix107s = {
 }
 $http(fix107s).then(function(response2) {
    var fix1 = response2.data;
-	 $scope.fix107status = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+	 $scope.fix107status = (fix1 != null) ? fix1 : 'IN PROGRESS'	
 }, );
 var fix107b = {
     method: 'GET',
@@ -924,7 +924,7 @@ var fix1011s = {
 }
 $http(fix1011s).then(function(response2) {
      var fix1 = response2.data;
-	$scope.fix1011status = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+	$scope.fix1011status = (fix1 != null) ? fix1 : 'IN PROGRESS'	
 }, );
 var fix1011b = {
     method: 'GET',
@@ -958,7 +958,7 @@ var bfix1011s = {
 }
 $http(bfix1011s).then(function(response2) {
      var fix1= response2.data;
-	 $scope.bfix1011status = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+	 $scope.bfix1011status = (fix1 != null) ? fix1 : 'IN PROGRESS'	
 }, );
 var bfix1011b = {
     method: 'GET',
@@ -991,7 +991,7 @@ var fix1012s = {
 }
 $http(fix1012s).then(function(response2) {
     var fix1= response2.data;
-	 $scope.fix1012status = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+	 $scope.fix1012status = (fix1 != null) ? fix1 : 'IN PROGRESS'	
 }, );
 var fix1012b = {
     method: 'GET',
@@ -1024,7 +1024,7 @@ var bfix1012s = {
 }
 $http(bfix1012s).then(function(response2) {
     var fix1 = response2.data;
-	$scope.bfix1012status = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+	$scope.bfix1012status = (fix1 != null) ? fix1 : 'IN PROGRESS'	
 }, );
 var bfix1012b = {
     method: 'GET',
@@ -1057,7 +1057,7 @@ var fix1015s = {
 }
 $http(fix1015s).then(function(response2) {
      var fix1= response2.data;
-	$scope.fix1015status = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+	$scope.fix1015status = (fix1 != null) ? fix1 : 'IN PROGRESS'	
 }, );
 var fix1015b = {
     method: 'GET',
@@ -1090,7 +1090,7 @@ var bfix1015s = {
 }
 $http(bfix1015s).then(function(response2) {
     var fix1 = response2.data;
-	$scope.bfix1015status = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+	$scope.bfix1015status = (fix1 != null) ? fix1 : 'IN PROGRESS'	
 }, );
 var bfix1015b = {
     method: 'GET',
@@ -1123,7 +1123,7 @@ var trunks = {
 }
 $http(trunks).then(function(response2) {
     var fix1 = response2.data;
-	$scope.trunkstatus=(fix1 != null) ? fix1 : 'ON PROGRESS'	
+	$scope.trunkstatus=(fix1 != null) ? fix1 : 'IN PROGRESS'	
 }, );
 var trunkb = {
     method: 'GET',
@@ -1156,7 +1156,7 @@ var trunkcs = {
 }
 $http(trunkcs).then(function(response2) {
    var fix1 = response2.data;
-    $scope.trunkcstatus = (fix1 != null) ? fix1 : 'ON PROGRESS'	
+    $scope.trunkcstatus = (fix1 != null) ? fix1 : 'IN PROGRESS'	
   
 }, );
 var trunkcb = {
@@ -1659,62 +1659,7 @@ function connectorTabsv(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-function test(){
-	var tabsNewAnim = $('#navbarSupportedContent');
-	var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
-	var activeItemNewAnim = tabsNewAnim.find('.active');
-	var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
-	var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
-	var itemPosNewAnimTop = activeItemNewAnim.position();
-	var itemPosNewAnimLeft = activeItemNewAnim.position();
-	$(".hori-selector").css({
-		"top":itemPosNewAnimTop.top + "px", 
-		"left":itemPosNewAnimLeft.left + "px",
-		"height": activeWidthNewAnimHeight + "px",
-		"width": activeWidthNewAnimWidth + "px"
-	});
-	$("#navbarSupportedContent").on("click","li",function(e){
-		$('#navbarSupportedContent ul li').removeClass("active");
-		$(this).addClass('active');
-		var activeWidthNewAnimHeight = $(this).innerHeight();
-		var activeWidthNewAnimWidth = $(this).innerWidth();
-		var itemPosNewAnimTop = $(this).position();
-		var itemPosNewAnimLeft = $(this).position();
-		$(".hori-selector").css({
-			"top":itemPosNewAnimTop.top + "px", 
-			"left":itemPosNewAnimLeft.left + "px",
-			"height": activeWidthNewAnimHeight + "px",
-			"width": activeWidthNewAnimWidth + "px"
-		});
-	});
-}
-$(document).ready(function(){
-	setTimeout(function(){ test(); });
-});
-$(window).on('resize', function(){
-	setTimeout(function(){ test(); }, 500);
-});
-$(".navbar-toggler").click(function(){
-	$(".navbar-collapse").slideToggle(300);
-	setTimeout(function(){ test(); });
-});
 
-
-
-// --------------add active class-on another-page move----------
-jQuery(document).ready(function($){
-	// Get current path and find target link
-	var path = window.location.pathname.split("/").pop();
-
-	// Account for home page with empty path
-	if ( path == '' ) {
-		path = 'index.html';
-	}
-
-	var target = $('#navbarSupportedContent ul li a[href="'+path+'"]');
-	// Add active class to target link
-	target.parent().addClass('active');
-});
 
 	
 

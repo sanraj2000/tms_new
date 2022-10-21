@@ -118,43 +118,6 @@ body {
 
 
 /* ################Tooltip START ################ */
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-.statusLine1{
-  height:2px;
-  border-width:0;color:gray;
-  background-color:green; 
-  width:100%;
-   margin-top: -16px;
-}
-.statusLine2{
-  height:2px;
-  border-width:0;color:gray;
-  background-color:red; 
-  width:100%;
-   margin-top: -16px;
-}
 
 
 .vbutton {
